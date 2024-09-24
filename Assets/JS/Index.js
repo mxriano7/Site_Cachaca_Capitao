@@ -173,6 +173,10 @@ function stopDisplay(interval) {
 
 // Inicializa o comportamento de exibição dos cartões e adiciona eventos de mouse para cada cartão.
 function initializeDisplay(containerSelector, displayDuration) {
+    if (window.innerWidth < 1024) {
+        return;
+    }
+
     const cards = document.querySelectorAll(`${containerSelector} .card`);
     let currentIndex = 0;
     let displayInterval;
@@ -201,6 +205,7 @@ function initializeDisplay(containerSelector, displayDuration) {
 document.addEventListener('DOMContentLoaded', () => {
     initializeDisplay('#productsContainer', 3000);
 });
+
 
 // Funções auxiliares:
 // Função para capitalizar a primeira letra de cada palavra em uma string.

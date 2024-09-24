@@ -608,7 +608,6 @@ function displayShippingOptions(options) {
                     ${option.name}(Correios) - R$ ${price.toFixed(2)}<br>
                     Prazo para entrega: ${option.delivery_time} dias
                 </label>
-                <hr>
             `;
             container.appendChild(optionElement);
 

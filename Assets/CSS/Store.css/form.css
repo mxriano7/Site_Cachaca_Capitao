@@ -1,9 +1,9 @@
 .order-section {
     display: none;
     background-color: snow;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: auto;
-    width: 100%;
+    height: calc(100vh - 40px);
 }
 
 #orderFormContainer {
@@ -116,22 +116,34 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
 }
 
 #shippingOptionsContainer {
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
+    width: 60%;
+    background-color: brown;
+    border: none;
+    border-radius: 5px;
 }
 
 .shipping-option {
-    display: flex;
-    align-items: center;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    display: flex;
+    color: snow;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s;
+    margin: 0;
+}
+
+.shipping-option:hover {
+    background-color: #140f07;
 }
 
 .shipping-option label {
@@ -298,7 +310,21 @@ form {
         height: 25px;
     }
 
-    .shipping-option {
+    #shippingOptionsContainer {
         width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: snow;
+        color: #140f07;
+    }
+
+    .shipping-option {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: brown;
+        color: snow;
+        border-radius: 0;
     }
 }
