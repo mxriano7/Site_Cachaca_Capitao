@@ -6,11 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
 
     body.classList.add("no-scroll");
+    document.getElementById("main").style.display = 'none';
+    document.getElementById("about").style.display = 'none';
+    document.getElementById("products").style.display = 'none';
+    document.getElementById("contact").style.display = 'none';
+    document.querySelector("footer").style.display = 'none';
     loadingModal.style.display = 'flex';
 
     setTimeout(() => {
         loadingModal.style.display = 'none';
         body.classList.remove("no-scroll");
+        document.getElementById("main").style.display = '';
+        document.getElementById("about").style.display = '';
+        document.getElementById("products").style.display = '';
+        document.getElementById("contact").style.display = '';
+        document.querySelector("footer").style.display = '';
     }, 1000);
 });
 
