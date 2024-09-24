@@ -128,7 +128,6 @@ form {
 .shipping-option {
     display: flex;
     align-items: center;
-    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 75%;
