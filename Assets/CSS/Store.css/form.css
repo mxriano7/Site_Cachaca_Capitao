@@ -134,6 +134,7 @@ form {
 }
 
 .shipping-option label {
+    width: 100%;
     display: block;
     cursor: pointer;
 }
