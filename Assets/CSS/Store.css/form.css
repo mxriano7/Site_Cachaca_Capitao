@@ -1,14 +1,14 @@
 .order-section {
     display: none;
     background-color: snow;
-    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: calc(100vh - 40px);
+    height: auto;
+    width: 100%;
 }
 
 #orderFormContainer {
     max-width: 800px;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
