@@ -1,0 +1,105 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#awardsInfo {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: snow;
+    overflow-x: hidden;
+    margin-bottom: 1em;
+    border-bottom: 1px solid snow;
+    background-color: #552d24;
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.product-awards {
+    width: 45%;
+    margin-top: 120px;
+    border: 1px solid snow;
+    border-radius: 8px;
+    background-color: snow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.product-awards:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-awards h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color:  #140f07;
+}
+
+.product-image {
+    width: 100%;
+    height: 375px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: fill;
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+.product-awards ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-awards li {
+    font-size: 1em;
+    font-weight: 400;
+    color: #140f07;
+    margin-bottom: 10px;
+}
+
+#awardsInfo a {
+    color: #140f07;
+    background-color: snow;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#awardsInfo a:hover {
+    background-color: #140f07;
+    color: snow;
+}
+
+@media screen and (max-width: 1300px) {
+    #awardsInfo {
+        margin-top: 120px;
+        justify-content: flex-start;
+        height: auto;
+        gap: 0;
+    }
+
+    .product-awards {
+        width: 100%;
+        height: auto;
+        margin: 1em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-awards h2 {
+        font-size: 1.25rem;
+    }
+
+    .product-awards li {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,79 @@
+#contact {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #552d24;
+    text-align: center;
+    border-top: 1px solid snow;
+    border-bottom: 1px solid snow;
+    padding: 20px 10px;
+    margin: 1em auto;
+    color: snow;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin: auto;
+    color: snow;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid #140f07;
+    border-radius: 5px;
+    background-color: #140f07;
+    color: snow;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#contactForm textarea {
+    height: 100px;
+    resize: none;
+}
+
+#sendContactBtn {
+    display: inline-block;
+    border: none;
+    color: #140f07;
+    background-color: snow;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    animation-delay: 2s;
+    cursor: pointer;
+}
+
+#sendContactBtn:hover {
+    background-color: brown;
+    color: snow;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #contact h2 {
+        font-size: 1.2rem;
+    }
+
+    #sendContactBtn {
+        padding: 6px 14px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,270 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #140f07;
+    background-color: #140f07;
+    overflow-x: hidden;
+}
+
+.amatic-sc-regular {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        background-position: 100% center;
+    }
+
+    to {
+        background-position: left center;
+    }
+}
+
+#main {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../../Img/Img.Index/Principal/670ml\(1x\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid snow;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 90px 1em 1em 1em;
+}
+
+#mainContent h1,
+#mainContent h2,
+#mainContent p,
+#mainContent a {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    text-align: left;
+}
+
+#mainContent h1 {
+    color: snow;
+    font-size: 5rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    animation-delay: 1s;
+}
+
+#mainContent h2 {
+    color: snow;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 3rem;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    animation-delay: 1.5s;
+}
+
+#mainContent p {
+    color: snow;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    max-width: 40%;
+    word-wrap: break-word;
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    animation-delay: 2s;
+}
+
+#mainContent a {
+    display: inline-block;
+    color: #140f07;
+    background-color: snow;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    animation-delay: 2s;
+}
+
+#mainContent a:hover {
+    background-color: brown;
+    border-radius: 20px;
+    color: snow;
+}
+
+footer {
+    background-color: #140f07;
+    color: snow;
+    padding: 2rem 5%;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid snow;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footerLogo,
+#footerInfo {
+    flex: 1;
+    text-align: center;
+}
+
+#footerLogo img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer p,
+footer h3 {
+    margin: 1.2rem 0;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+@media only screen and (max-width: 1210px) {
+    #main {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #mainContent {
+        padding: 0.5rem;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 75%;
+        background-color: #000000bb;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-out forwards;
+        animation-delay: 1s;
+        margin: 140px 1em 1em 1em;
+    }
+
+    #mainContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mainContent h1,
+    #mainContent h2,
+    #mainContent p,
+    #mainContent a {
+        text-align: center;
+    }
+
+    #mainContent h1 {
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        animation-delay: 1.75s;
+    }
+
+    #mainContent h2 {
+        font-size: clamp(1.25rem, 3vw, 2rem);
+        animation-delay: 2s;
+    }
+
+    #mainContent p {
+        font-weight: 300;
+        font-size: 1rem;
+        max-width: 90%;
+        animation-delay: 2.5s;
+    }
+
+    #mainContent a {
+        padding: 6px 14px;
+        font-size: 1rem;
+        animation-delay: 2.5s;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: left;
+        background-color: #140f07;
+        color: snow;
+        padding: 1rem;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        border-top: 1px solid snow;
+    }
+
+    footer h3 {
+        font-size: calc(1rem + 0.5vw);
+    }
+
+    footer p {
+        font-size: calc(0.75rem + 0.5vw);
+        margin-bottom: 1.2rem;
+    }
+}
+
+/* Estilizando a tela de carregamaneto*/
+.new-loading-modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #140f07;
+    color: snow;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    overflow: hidden;
+}
+
+.new-loading-content {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+}
+
+.new-spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid snow;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

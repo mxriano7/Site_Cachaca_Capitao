@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+        style-src 'self' https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
+        script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='; 
+        connect-src 'self' https://viacep.com.br https://servercachacacapitao.vercel.app/calculateFreight https://servercachacacapitao.vercel.app/sendOrder;">
+  <title>Loja</title>
+  <link rel="stylesheet" href="../Assets/CSS/Src/src.css" />
+  <link rel="stylesheet" href="../Assets/CSS/Store.css/main.css" />
+  <link rel="stylesheet" href="../Assets/CSS/Store.css/products.css" />
+  <link rel="stylesheet" href="../Assets/CSS/Store.css/form.css" />
+  <link rel="stylesheet" href="../Assets/CSS/Store.css/cart.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <header id="page">
+    <nav class="nav-bar">
+      <img src="../Assets/Img/Img.Store/Principal/Logo(2)-PNG.png" alt="Logo" class="logo">
+      <div class="slogan">"Experimenta quem pode,<br />bebe quem tem juízo!"</div>
+      <div class="nav-links" id="navLink">
+        <a href="../index.html">
+          <i class="fa fa-home"></i>
+          <span class="tooltiptext">Voltar para o início</span>
+        </a>
+        <a href="../History/history.html">
+          <i class="fas fa-book"></i>
+          <span class="tooltiptext">História da Cachaçaria</span>
+        </a>
+        <a href="../Awards/awards.html">
+          <i class="fa fa-trophy"></i>
+          <span class="tooltiptext">Prêmios e Competições</span>
+        </a>
+        <a href="https://www.instagram.com/cachacadealambique_capitao?igsh=NjI5Z3V6bjJxeXBq" target="_blank">
+          <i class="fa fa-instagram"></i>
+          <span class="tooltiptext">Siga-nos no Instagram</span>
+        </a>
+      </div>
+      <div class="nav-bar-mobile" id="toggleNavBtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+    <div id="pageContent">
+      <h1>Loja do Capitão</h1>
+      <h2>"Lar da Cachaça Capitão"</h2>
+      <p>
+        "Ao optar por nossas cachaças, você não apenas adquire um produto, mas também mergulha em uma tradição
+        enraizada! Nossa missão é preservar essa tradição e compartilhar com você a autenticidade e riqueza que fazem
+        parte da nossa história."
+      </p>
+      <button id="toggleCartBtn">Abrir Carrinho</button>
+    </div>
+  </header>
+
+  <div id="products">
+    <h1>Destilados Cachaça Capitão</h1>
+    <div id="container">
+      <!-- Produto 1 -->
+      <div class="product">
+        <div class="product-photo">
+          <div class="photo-container">
+            <div class="photo-main">
+              <img src="#" alt="Cachaça Capitão Carvalho" />
+            </div>
+          </div>
+          <div class="description-section">
+            <h3>Descrição:</h3>
+            <span class="description"></span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="product-info">
+            <div class="product-title">
+              <span class="name"></span>
+              <span class="volume-ml"></span>
+            </div>
+            <div class="product-price">
+              <span class="price"></span>
+            </div>
+          </div>
+          <div class="variant">
+            <h3>Volume em (ml)</h3>
+            <button class="version-btn" data-product="Carvalho" data-volume="670ml" data-price="80.00"
+              data-description="Capitão Carvalho - 670ml:<br />Delicie-se com a Cachaça Capitão Carvalho, uma destilada de sofisticação inigualável. Com seu aroma profundo e suave toque de carvalho, ela proporciona uma experiência única e refinada para seus apreciadores.<br />Teor alcoólico: 42%"
+              data-product-id="1" data-image-src="../Assets/Img/Img.Store/Produtos/Carvalho670ml(1)-PNG.png">
+              670ml
+            </button>
+            <button class="version-btn" data-product="Carvalho" data-volume="750ml" data-price="120.00"
+              data-description="Capitão Carvalho - 750ml:<br />Delicie-se com a Cachaça Capitão Carvalho, uma destilada de sofisticação inigualável. Com seu aroma profundo e suave toque de carvalho, ela proporciona uma experiência única e refinada para seus apreciadores.<br />Teor alcoólico: 42%"
+              data-product-id="1" data-image-src="../Assets/Img/Img.Store/Produtos/Carvalho750ml(2)-PNG.png">
+              750ml
+            </button>
+          </div>
+          <button class="add-btn" data-product-id="1">Adicionar</button>
+        </div>
+      </div>
+      <!-- Produto 2 -->
+      <div class="product">
+        <div class="product-photo">
+          <div class="photo-container">
+            <div class="photo-main">
+              <img src="#" alt="Cachaça Capitão Amburana" />
+            </div>
+          </div>
+          <div class="description-section">
+            <h3>Descrição:</h3>
+            <span class="description"></span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="product-info">
+            <div class="product-title">
+              <span class="name"></span>
+              <span class="volume-ml"></span>
+            </div>
+            <div class="product-price">
+              <span class="price"></span>
+            </div>
+          </div>
+          <div class="variant">
+            <h3>Volume em (ml)</h3>
+            <button class="version-btn" data-product="Amburana" data-volume="275ml" data-price="25.00"
+              data-description="Capitão Amburana - 275ml:<br />Experimente a Cachaça Capitão Amburana, onde a suavidade da cachaça se funde com os aromas marcantes da madeira de amburana. É a escolha ideal para quem busca sabores autênticos e uma bebida de qualidade superior.<br />Teor alcoólico: 42%"
+              data-product-id="2" data-image-src="../Assets/Img/Img.Store/Produtos/Amburana275ml(1)-PNG.png">
+              275ml
+            </button>
+            <button class="version-btn" data-product="Amburana" data-volume="670ml" data-price="60.00"
+              data-description="Capitão Amburana - 670ml:<br />Experimente a Cachaça Capitão Amburana, onde a suavidade da cachaça se funde com os aromas marcantes da madeira de amburana. É a escolha ideal para quem busca sabores autênticos e uma bebida de qualidade superior.<br />Teor alcoólico: 42%"
+              data-product-id="2" data-image-src="../Assets/Img/Img.Store/Produtos/Amburana670ml(1)-PNG.png">
+              670ml
+            </button>
+            <button class="version-btn" data-product="Amburana" data-volume="750ml" data-price="100.00"
+              data-description="Capitão Amburana - 750ml:<br />Experimente a Cachaça Capitão Amburana, onde a suavidade da cachaça se funde com os aromas marcantes da madeira de amburana. É a escolha ideal para quem busca sabores autênticos e uma bebida de qualidade superior.<br />Teor alcoólico: 42%"
+              data-product-id="2" data-image-src="../Assets/Img/Img.Store/Produtos/Amburana750ml(1)-PNG.png">
+              750ml
+            </button>
+          </div>
+          <button class="add-btn" data-product-id="2">Adicionar</button>
+        </div>
+      </div>
+      <!-- Produto 3 -->
+      <div class="product">
+        <div class="product-photo">
+          <div class="photo-container">
+            <div class="photo-main">
+              <img src="#" alt="Cachaça Capitão Prata" />
+            </div>
+          </div>
+          <div class="description-section">
+            <h3>Descrição:</h3>
+            <span class="description"></span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="product-info">
+            <div class="product-title">
+              <span class="name"></span>
+              <span class="volume-ml"></span>
+            </div>
+            <div class="product-price">
+              <span class="price"></span>
+            </div>
+          </div>
+          <div class="variant">
+            <h3>Volume em (ml)</h3>
+            <button class="version-btn" data-product="Prata" data-volume="275ml" data-price="25.00"
+              data-description="Capitão Prata - 275ml:<br />Uma cachaça leve e cristalina, que reflete a pureza da tradição brasileira. Esta cachaça é a escolha perfeita para quem aprecia a delicadeza e a autenticidade de uma bebida tradicional. Ideal para momentos de celebração.<br />Teor alcoólico: 42%"
+              data-product-id="3" data-image-src="../Assets/Img/Img.Store/Produtos/Prata275ml(1)-PNG.png">
+              275ml
+            </button>
+            <button class="version-btn" data-product="Prata" data-volume="670ml" data-price="60.00"
+              data-description="Capitão Prata - 670ml:<br />Uma cachaça leve e cristalina, que reflete a pureza da tradição brasileira. Esta cachaça é a escolha perfeita para quem aprecia a delicadeza e a autenticidade de uma bebida tradicional. Ideal para momentos de celebração.<br />Teor alcoólico: 42%"
+              data-product-id="3" data-image-src="../Assets/Img/Img.Store/Produtos/Prata670ml(1)-PNG.png">
+              670ml
+            </button>
+          </div>
+          <button class="add-btn" data-product-id="3">Adicionar</button>
+        </div>
+      </div>
+      <!-- Produto 4 -->
+      <div class="product">
+        <div class="product-photo">
+          <div class="photo-container">
+            <div class="photo-main">
+              <img src="#" alt="Cachaça Capitão Jequitibá" />
+            </div>
+          </div>
+          <div class="description-section">
+            <h3>Descrição:</h3>
+            <span class="description"></span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="product-info">
+            <div class="product-title">
+              <span class="name"></span>
+              <span class="volume-ml"></span>
+            </div>
+            <div class="product-price">
+              <span class="price"></span>
+            </div>
+          </div>
+          <div class="variant">
+            <h3>Volume em (ml)</h3>
+            <button class="alert-product-out-of-stock">Mais versões em breve</button>
+          </div>
+          <button class="add-btn" data-product-id="4">Adicionar</button>
+        </div>
+      </div>
+      <!-- Produto 5 -->
+      <div class="product" id="kit-product">
+        <div class="product-photo">
+          <div class="photo-container">
+            <div class="photo-main">
+              <img src="#" alt="Kit Presente" />
+            </div>
+          </div>
+          <div class="description-section">
+            <h3>Descrição:</h3>
+            <span class="description"></span>
+          </div>
+        </div>
+        <div class="details">
+          <div class="product-info">
+            <div class="product-title">
+              <span class="name"></span>
+              <span class="volume-ml"></span>
+            </div>
+            <div class="product-price">
+              <span class="price"></span>
+            </div>
+          </div>
+          <div class="kit-selection">
+            <h3>Escolha a versão que mais combina com você!</h3>
+            <label>
+              <input type="radio" name="kitType" value="kit1" checked> Amburana, Prata e Jequitibá
+            </label>
+            <label>
+              <input type="radio" name="kitType" value="kit2"> Amburana, Carvalho e Jequitibá
+            </label>
+          </div>
+          <button class="add-btn-kit">Adicionar Kit</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cart-section">
+    <div class="cart">
+      <button id="closeCart">X</button>
+      <h2>Carrinho de Compras</h2>
+      <button id="confirmButton">Continuar Pedido</button>
+      <br />
+      <!-- Carrinho de compras será preenchido dinamicamente pelo JavaScript -->
+      <div id="cartItemsContainer">
+        <!-- Itens do carrinho serão adicionados aqui -->
+      </div>
+      <div class="total">Total: <span id="totalAmount">R$ 0.00</span>
+      </div>
+      <br />
+    </div>
+  </div>
+
+  <div class="order-section">
+    <div id="orderFormContainer">
+      <h2>Formulário do Pedido</h2>
+      <details>
+        <summary>Privacidade e Segurança</summary>
+        <p>
+          A segurança dos seus dados pessoais é muito importante para nós. Usamos suas informações apenas para garantir
+          uma compra segura e personalizada. Nossos processos protegem seus dados contra usos indevidos e são usados
+          ​​para facilitar a logística e os pagamentos. Você pode ficar tranquilo(a), pois valorizamos sua confiança e
+          estamos comprometidos em oferecer uma experiência de compra confiável.
+        </p>
+      </details>
+      <div id="formNavBar">
+        <div>
+          <button id="closeFormBtn">Voltar</button>
+          <button id="openCartInForm" type="button">Carrinho</button>
+        </div>
+        <div id="shippingOptionsContainer">
+        </div>
+      </div>
+      <form id="orderForm" method="POST">
+        <!-- Coluna esquerda -->
+        <div id="idFormColumn" class="form-column">
+          <h2>Dados Pessoais:</h2>
+          <div class="input-group">
+            <input type="text" id="firstName" name="firstName" placeholder="Nome" required aria-label="Nome"
+              maxlength="20" class="input">
+            <label for="firstName" class="user-label">Nome</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="lastName" name="lastName" placeholder="Sobrenome" required aria-label="Sobrenome"
+              maxlength="30" class="input">
+            <label for="lastName" class="user-label">Sobrenome</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="cpfCnpj" name="cpfCnpj" placeholder="CPF ou CNPJ" required aria-label="CPF ou CNPJ"
+              minlength="14" maxlength="18" pattern="[0-9]+" class="input">
+            <label for="cpfCnpj" class="user-label">CPF ou CNPJ</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" name="email" required aria-label="E-mail" aria-describedby="emailError"
+              class="input" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+            <label for="email" class="user-label" id="emailLabel">Digite seu e-mail</label>
+          </div>
+          <div class="input-group">
+            <input type="tel" id="telephone" name="telephone" placeholder="Telefone/Celular" required
+              aria-label="Telefone/Celular" maxlength="30" class="input">
+            <label for="telephone" class="user-label">Telefone/Celular</label>
+          </div>
+          <button id="submitOrderBtn" type="button" class="animated-button">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+              </path>
+            </svg>
+            <span class="text">Finalizar Pedido</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <!-- Coluna direita -->
+        <div id="addressFormColumn" class="form-column">
+          <h2>Endereço:</h2>
+          <div class="input-group">
+            <input type="text" id="cep" name="cep" placeholder="CEP" required aria-label="CEP" class="input">
+            <label for="cep" class="user-label">CEP</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="address" name="address" placeholder="Endereço" required aria-label="Endereço"
+              autocomplete="off" class="input">
+            <label for="address" class="user-label">Endereço</label>
+          </div>
+          <div class="input-row">
+            <div class="input-group">
+              <input type="text" id="city" name="city" placeholder="Cidade" required aria-label="Cidade" maxlength="40"
+                class="input">
+              <label for="city" class="user-label">Cidade</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="state" name="state" placeholder="Estado" required aria-label="Estado"
+                maxlength="30" class="input">
+              <label for="state" class="user-label">Estado</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="text" id="addressNumber" name="addressNumber" placeholder="Número" required aria-label="Número"
+              maxlength="10" class="input">
+            <label for="addressNumber" class="user-label">Número</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="addressComplement" name="addressComplement" placeholder="Complemento do Endereço"
+              aria-label="Complemento de Endereço" class="input">
+            <label for="addressComplement" class="user-label">Complemento do Endereço</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footerInfo">
+      <h3>Informações:</h3>
+      <p><strong>Localização:</strong><br />BR 267 | Km 193, Bom Jardim de Minas 37310-000, MG, Brasil</p>
+      <p><strong>Horário de Funcionamento:</strong><br />Segunda a Sexta, das 9h às 18h</p>
+      <p><strong>Contato: </strong>+55 (32) 98427-9659</p>
+    </div>
+    <div id="footerLogo">
+      <img src="../Assets/Img/Img.Store/Principal/Logo(2)-PNG.png" alt="Logo" class="logo">
+      <p>&copy; 2024 Cachaçaria Fazenda do Engenho.<br>Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="loadingModal" class="loading-modal">
+    <div class="loading-content">
+      <div class="spinner"></div>
+      <p id="loadingMessage">Enviando pedido...</p>
+      <div id="statusIcon" class="status-icon"></div>
+    </div>
+  </div>
+
+  <script src="../Assets/JS/Store.js"></script>
+</body>
+
+</html>

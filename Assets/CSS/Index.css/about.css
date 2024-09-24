@@ -1,0 +1,185 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+#about {
+    margin-top: 1em;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../../Img/Img.Index/Principal/Fazenda\(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-blend-mode: darken;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid snow;
+    border-top: 1px solid snow;
+}
+
+#aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 1em;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#about.show #aboutContent {
+    animation: fadeInUp 3s ease-out forwards;
+}
+
+#about.hide #aboutContent {
+    animation: fadeOutDown 0.5s ease-out forwards;
+}
+
+#about h1,
+#about p,
+#about a {
+    text-align: left;
+}
+
+#about h1 {
+    font-family: 'Amatic SC', cursive;
+    color: snow;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#about.show h1 {
+    animation: fadeInUp 1.25s ease-out forwards;
+}
+
+#about.hide h1 {
+    animation: fadeOutDown 0.75s ease-out forwards;
+}
+
+#about p {
+    color: snow;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: bold;
+    max-width: 40%;
+    text-shadow: 3px 3px 8px rgb(0, 0, 0);
+    text-indent: 2em;
+    word-wrap: break-word;
+    hyphens: auto;
+    margin-bottom: 12px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#about p span {
+    display: block;
+    text-indent: 2em;
+}
+
+#about.show p {
+    animation: fadeInUp 1.5s ease-out 0.2s forwards;
+}
+
+#about.hide p {
+    animation: fadeOutDown 0.75s ease-out 0.2s forwards;
+}
+
+#about a {
+    display: inline-block;
+    color: #140f07;
+    background-color: snow;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+}
+
+#about.show a {
+    animation: fadeInUp 1.5s ease-out 0.4s forwards;
+}
+
+#about.hide a {
+    animation: fadeOutDown 0.75s ease-out 0.4s forwards;
+}
+
+#about a:hover {
+    background-color: brown;
+    border-radius: 20px;
+    color: snow;
+}
+
+@media only screen and (max-width: 1024px) {
+    #about {
+        height: auto;
+    }
+    #aboutContent {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 1rem;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    #about h1 {
+        font-size: 2.75rem;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        color: #140f07;
+    }
+
+    #about p {
+        padding: 0.5rem;
+        border-radius: 12px;
+        max-width: 80%;
+        background-color: #00000090;
+        font-size: calc(0.85rem + 0.5vw);
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+
+    #about a {
+        padding: 6px 14px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,322 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilizando a barra de navegação */
+.nav-bar {
+    justify-content: space-around;
+    align-items: center;
+    color: snow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #140f07;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.nav-links {
+    width: 600px;
+    overflow: auto;
+}
+
+.nav-links a {
+    float: left;
+    text-align: center;
+    width: 150px;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    color: snow;
+    font-size: 36px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.nav-links a:hover {
+    color: brown;
+}
+
+.slogan {
+    margin-right: 20px;
+    background-clip: text;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+    color: snow;
+    transition: color 0.5s ease;
+    cursor: pointer;
+    font-family: "Amatic SC", sans-serif;
+    font-size: calc(1rem + 2vw);
+    font-weight: bold;
+}
+
+.slogan:hover {
+    color: brown;
+}
+
+.logo {
+    width: 300px;
+    height: 100%;
+}
+
+.fas {
+    font-size: 30px;
+    text-align: center;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    color: brown;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-bar .nav-bar-mobile {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 23px;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.nav-bar .nav-bar-mobile div {
+    width: 30px;
+    height: 3px;
+    background-color: snow;
+    transition: all 0.3s ease;
+}
+
+.nav-bar.active .nav-bar-mobile .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-bar.active .nav-bar-mobile .bar2 {
+    opacity: 0;
+}
+
+.nav-bar.active .nav-bar-mobile .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-hidden {
+    transform: translateY(-100%);
+}
+
+@media only screen and (max-width: 1224px) {
+    .tooltiptext {
+        display: none;
+    }
+
+    a:hover .tooltiptext {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        height: 100px;
+        background-color: #140f07;
+        border-top: 1px solid black;
+        box-sizing: border-box;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+
+    .nav-bar.active .nav-links {
+        display: flex;
+        max-height: 100px;
+        padding: 1rem 0;
+        margin: auto;
+        justify-content: space-around;
+    }
+
+    .nav-bar .nav-bar-mobile {
+        display: flex;
+        width: 10%;
+    }
+
+    .slogan {
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        width: calc(40% + 2vw);
+        text-align: center;
+        font-size: calc(1rem + 2vw);
+    }
+
+    .logo {
+        max-height: 100%;
+        object-fit: contain;
+        width: calc(20% + 10vw);
+    }
+}
+
+/* Estilizando a barra de rolagem para navegadores WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: #140f07;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: snow;
+    border: none;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Estilizando a barra de rolagem dentro da seção .cart-section */
+.cart-section .cart::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.cart-section .cart::-webkit-scrollbar-track {
+    background: #140f07;
+    border-radius: 10px;
+}
+
+.cart-section .cart::-webkit-scrollbar-thumb {
+    background: brown;
+    border-radius: 10px;
+}
+
+/* Estilizando a tela de carregamento durante envios */
+.loading-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #552d24;
+    color: #140f07;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    overflow: hidden;
+}
+
+.loading-content {
+    background: snow;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    max-width: 400px;
+    /* Adicionando um limite máximo de largura */
+    margin: 0 auto;
+    /* Centralizando no eixo horizontal */
+}
+
+/* Estilização do spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #140f07;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+/* Mensagem de carregamento */
+#loadingMessage {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Ícone de status */
+.status-icon {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.status-icon.success {
+    color: green;
+}
+
+.status-icon.error {
+    color: red;
+}
+
+/* Estilos mobile */
+@media only screen and (max-width: 1024px) {
+    .loading-content {
+        width: 80%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .spinner {
+        width: 30px;
+        height: 30px;
+    }
+
+    #loadingMessage {
+        font-size: 14px;
+    }
+
+    .status-icon {
+        font-size: 20px;
+    }
+}
