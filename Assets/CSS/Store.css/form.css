@@ -128,9 +128,10 @@ form {
 .shipping-option {
     display: flex;
     align-items: center;
+    margin: auto;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 75%;
+    width: 60%;
 }
 
 .shipping-option label {
