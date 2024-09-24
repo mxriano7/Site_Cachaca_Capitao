@@ -1,7 +1,7 @@
 .order-section {
     display: none;
     background-color: snow;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: calc(100vh - 40px);
 }
@@ -123,6 +123,7 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    width: 100%;
 }
 
 .shipping-option {
@@ -134,7 +135,6 @@ form {
 }
 
 .shipping-option label {
-    width: 100%;
     display: block;
     cursor: pointer;
 }
