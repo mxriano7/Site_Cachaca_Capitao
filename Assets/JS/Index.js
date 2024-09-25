@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("products").style.display = '';
         document.getElementById("contact").style.display = '';
         document.querySelector("footer").style.display = '';
-    }, 2000);
+    }, 1500);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
