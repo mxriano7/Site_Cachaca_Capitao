@@ -713,7 +713,7 @@ function moveShippingOptions() {
 
     if (window.innerWidth < 1024) {
         if (!addressColumn.contains(shippingOptions)) {
-            addressColumn.insertBefore(shippingOptions, addressColumn.firstChild);
+            addressColumn.appendChild(shippingOptions);
         }
     } else {
         const formNavBar = document.getElementById('formNavBar');

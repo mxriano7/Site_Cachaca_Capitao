@@ -319,8 +319,8 @@ a:hover .tooltiptext {
     .status-icon {
         font-size: 20px;
     }
-}
 
-a:focus {
-    outline: none;
-  }
+    a:focus {
+        outline: none;
+    }
+}
