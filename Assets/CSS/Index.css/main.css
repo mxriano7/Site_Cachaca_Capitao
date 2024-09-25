@@ -225,6 +225,16 @@ footer h3 {
         font-size: calc(0.75rem + 0.5vw);
         margin-bottom: 1.2rem;
     }
+
+    .new-loading-message{
+        font-size: 0.5em;
+    }
+
+    .new-spinner {
+        width: 10px;
+        height: 10px;
+        border-width: 6px;
+    }
 }
 
 /* Estilizando a tela de carregamaneto*/
@@ -257,8 +267,8 @@ footer h3 {
 }
 
 .new-spinner {
-    border: 8px solid rgba(255, 255, 255, 0.3);
-    border-top: 8px solid snow;
+    border: 8px solid snow;
+    border-top: 8px solid brown;
     border-radius: 50%;
     width: 60px;
     height: 60px;
