@@ -93,7 +93,7 @@
 @media only screen and (max-width: 1024px) {
     .cart-section .cart {
         left: 5vw;
-        max-height: 275px;
+        max-height: 270px;
         max-width: 60vw;
         padding: 1rem;
         top: 5vh;
