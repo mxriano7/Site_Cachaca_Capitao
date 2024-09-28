@@ -118,37 +118,46 @@ body {
     color: snow;
 }
 
-footer {
-    background-color: #140f07;
-    color: snow;
-    padding: 2rem 5%;
-    font-family: Arial, sans-serif;
-    border-top: 1px solid snow;
-    margin-top: 1em;
+/* Estilizando a tela de carregamaneto*/
+.new-loading-modal {
     display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #140f07;
+    color: snow;
     align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    overflow: hidden;
 }
 
-#footerLogo,
-#footerInfo {
-    flex: 1;
+.new-loading-content {
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
 }
 
-#footerLogo img {
-    max-width: 100%;
-    height: auto;
+.new-spinner {
+    border: 8px solid snow;
+    border-top: 8px solid brown;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
 }
 
-footer p,
-footer h3 {
-    margin: 1.2rem 0;
-}
-
-footer h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
+.no-scroll {
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 1210px) {
@@ -206,26 +215,6 @@ footer h3 {
         animation-delay: 2.5s;
     }
 
-    footer {
-        flex-direction: column;
-        text-align: left;
-        background-color: #140f07;
-        color: snow;
-        padding: 1rem;
-        text-align: center;
-        font-family: Arial, sans-serif;
-        border-top: 1px solid snow;
-    }
-
-    footer h3 {
-        font-size: calc(1rem + 0.5vw);
-    }
-
-    footer p {
-        font-size: calc(0.75rem + 0.5vw);
-        margin-bottom: 1.2rem;
-    }
-
     .new-loading-message{
         font-size: 0.5em;
     }
@@ -235,46 +224,4 @@ footer h3 {
         height: 10px;
         border-width: 6px;
     }
-}
-
-/* Estilizando a tela de carregamaneto*/
-.new-loading-modal {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #140f07;
-    color: snow;
-    align-items: center;
-    justify-content: center;
-    z-index: 3000;
-    overflow: hidden;
-}
-
-.new-loading-content {
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 50%;
-}
-
-.new-spinner {
-    border: 8px solid snow;
-    border-top: 8px solid brown;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1s linear infinite;
-}
-
-.no-scroll {
-    overflow: hidden;
 }

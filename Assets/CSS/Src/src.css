@@ -195,42 +195,66 @@ a:hover .tooltiptext {
     }
 }
 
-/* Estilizando a barra de rolagem para navegadores WebKit (Chrome, Safari) */
-::-webkit-scrollbar {
-    width: 18px;
-    height: 18px;
-
+/* Estilo rodapé */
+footer {
+    background-color: #140f07;
+    color: snow;
+    padding: 2rem 5%;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid snow;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-::-webkit-scrollbar-track {
-    background: #140f07;
-    border: none;
+#footerLogo,
+#footerInfo {
+    flex: 1;
+    text-align: center;
 }
 
-::-webkit-scrollbar-thumb {
-    background: snow;
-    border: none;
-    border-radius: 10px;
+#footerLogo img {
+    max-width: 100%;
+    height: auto;
 }
 
-::-webkit-scrollbar-button {
-    display: none;
+#footerInfo a {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: snow;
+    transition: color 0.3s ease;
 }
 
-/* Estilizando a barra de rolagem dentro da seção .cart-section */
-.cart-section .cart::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+#footerInfo a:hover {
+    color: brown;
 }
 
-.cart-section .cart::-webkit-scrollbar-track {
-    background: #140f07;
-    border-radius: 10px;
+footer p,
+footer h3 {
+    margin: 1.2rem 0;
 }
 
-.cart-section .cart::-webkit-scrollbar-thumb {
-    background: brown;
-    border-radius: 10px;
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    footer h3 {
+        font-size: calc(1rem + 0.5vw);
+    }
+
+    footer p {
+        font-size: calc(0.75rem + 0.5vw);
+        margin-bottom: 1.2rem;
+    }
 }
 
 /* Estilizando a tela de carregamento durante envios */
@@ -262,12 +286,9 @@ a:hover .tooltiptext {
     width: 50%;
     height: 50%;
     max-width: 400px;
-    /* Adicionando um limite máximo de largura */
     margin: 0 auto;
-    /* Centralizando no eixo horizontal */
 }
 
-/* Estilização do spinner */
 .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-top: 4px solid #140f07;
@@ -278,14 +299,12 @@ a:hover .tooltiptext {
     margin-bottom: 20px;
 }
 
-/* Mensagem de carregamento */
 #loadingMessage {
     margin: 10px 0;
     font-size: 16px;
     text-align: center;
 }
 
-/* Ícone de status */
 .status-icon {
     font-size: 24px;
     margin-top: 10px;
@@ -323,4 +342,42 @@ a:hover .tooltiptext {
     a:focus {
         outline: none;
     }
+}
+
+/* Estilizando a barra de rolagem para navegadores WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 18px;
+    height: 18px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: #140f07;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: snow;
+    border: none;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Estilizando a barra de rolagem dentro da seção .cart-section */
+.cart-section .cart::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.cart-section .cart::-webkit-scrollbar-track {
+    background: #140f07;
+    border-radius: 10px;
+}
+
+.cart-section .cart::-webkit-scrollbar-thumb {
+    background: brown;
+    border-radius: 10px;
 }

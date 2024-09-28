@@ -141,39 +141,6 @@ body {
     color: snow;
 }
 
-footer {
-    background-color: #140f07;
-    color: snow;
-    padding: 2rem 5%;
-    font-family: Arial, sans-serif;
-    border-top: 1px solid snow;
-    margin-top: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#footerLogo,
-#footerInfo {
-    flex: 1;
-    text-align: center;
-}
-
-#footerLogo img {
-    max-width: 100%;
-    height: auto;
-}
-
-footer p,
-footer h3 {
-    margin: 1.2rem 0;
-}
-
-footer h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-}
-
 @media only screen and (max-width: 1300px) {
     #page {
         background-size: calc(700px + 10vw);
@@ -225,20 +192,5 @@ footer h3 {
         font-size: 1rem;
         animation-delay: 2.5s;
         margin: 1rem auto;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    footer h3 {
-        font-size: calc(1rem + 0.5vw);
-    }
-
-    footer p {
-        font-size: calc(0.75rem + 0.5vw);
-        margin-bottom: 1.2rem;
     }
 }
