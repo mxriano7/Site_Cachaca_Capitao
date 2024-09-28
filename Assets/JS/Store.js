@@ -891,7 +891,6 @@ function submitOrder(event) {
     const statusIcon = document.getElementById('statusIcon');
     const spinner = document.querySelector('.spinner');
 
-
     event.preventDefault();
 
     if (!isFormValid()) {
