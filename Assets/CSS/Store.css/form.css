@@ -320,7 +320,7 @@ form {
     }
 
     .shipping-option {
-        width: 275px;
+        width: 200px;
         display: flex;
         justify-content: center;
         text-align: center;
