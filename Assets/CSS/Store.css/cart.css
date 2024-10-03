@@ -55,6 +55,25 @@
     outline: none;
 }
 
+.removeBtn {
+    background-color: rgb(223, 16, 16);
+    color: snow;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.removeBtn:hover {
+    background-color: #140f07;
+}
+
 #closeCart {
     background-color: rgb(223, 16, 16);
     border: none;
