@@ -317,15 +317,19 @@ form {
         background-color: snow;
         color: #140f07;
         margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .shipping-option {
-        width: 225px;
+        width: 250px;
         display: flex;
         justify-content: center;
         text-align: center;
         background-color: brown;
         color: snow;
         border-radius: 0;
+        padding: 0 10px;
+        gap: 10px;
     }
 }
