@@ -334,11 +334,4 @@ form {
         padding: 10px 0;
         margin: 10px 0;
     }
-
-    .shipping-option label {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        cursor: pointer;
-    }
 }
