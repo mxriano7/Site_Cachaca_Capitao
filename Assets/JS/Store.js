@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const isCartVisible = cartSection.classList.contains('show');
 
         if (isCartVisible) {
-            cartSection.classList.add('slideOut');
+            cartSection.classList.add('slideOutCart');
             cartSection.classList.remove('show');
 
             setTimeout(() => {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cartSection.classList.add('show');
                 cartSection.style.opacity = '1';
                 cartSection.style.transform = 'translateY(0)';
-            }, 1);
+            }, 0);
         }
 
         toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';

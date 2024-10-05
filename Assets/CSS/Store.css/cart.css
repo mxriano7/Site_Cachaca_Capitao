@@ -140,11 +140,11 @@
 @media only screen and (max-width: 1024px) {
     .cart-section.show {
         display: block;
-        animation: slideIn 0.3s forwards;
+        animation: slideInCart 0.3s forwards;
     }
 
     .cart-section {
-        animation: slideOut 0.3s forwards;
+        animation: slideOutCart 0.3s forwards;
     }
 
     .cart-section {
@@ -163,7 +163,7 @@
         border-radius: 0;
         display: flex;
         flex-direction: column;
-        max-height: 95vh;
+        max-height: 90vh;
         width: 95%;
         overflow-y: auto;
         align-items: flex-start;
@@ -240,7 +240,7 @@
         margin: 1rem auto;
     }
 
-    @keyframes slideIn {
+    @keyframes slideInCart {
         from {
             transform: translateX(100%);
         }
@@ -250,7 +250,7 @@
         }
     }
 
-    @keyframes slideOut {
+    @keyframes slideOutCart {
         from {
             transform: translateX(0);
         }
