@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cartSection.classList.add('show');
                 cartSection.style.opacity = '1';
                 cartSection.style.transform = 'translateY(0)';
-            }, 0);
+            }, 1);
         }
 
         toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
