@@ -112,35 +112,6 @@ body {
     hyphens: auto;
 }
 
-#toggleCartBtn {
-    align-self: flex-end;
-    background-color: snow;
-    color: #140f07;
-    border-radius: 8px;
-    border: none;
-    margin-top: 15px;
-    margin-right: 1em;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    display: block;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 2s;
-    opacity: 0;
-}
-
-#toggleCartBtn:active {
-    transform: scale(0.95);
-}
-
-#toggleCartBtn:hover {
-    background-color: brown;
-    border-radius: 20px;
-    color: snow;
-}
-
 @media only screen and (max-width: 1300px) {
     #page {
         background-size: calc(700px + 10vw);
@@ -184,13 +155,5 @@ body {
         text-align: center;
         margin: 0 auto;
         animation-delay: 2.5s;
-    }
-
-    #toggleCartBtn {
-        border-radius: 12px;
-        padding: 6px 14px;
-        font-size: 1rem;
-        animation-delay: 2.5s;
-        margin: 1rem auto;
     }
 }

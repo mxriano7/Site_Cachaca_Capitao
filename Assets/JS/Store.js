@@ -38,21 +38,59 @@ document.addEventListener('DOMContentLoaded', function () {
         handleRemoveProductListeners();
     });
 
-    toggleCartBtn.addEventListener("click", function () {
+    function handleCartForLargerScreens() {
         const isCartVisible = cartSection.classList.contains('show');
-        cartSection.classList.toggle('show');
-        cartSection.style.display = isCartVisible ? 'none' : 'block';
+
+        if (isCartVisible) {
+            cartSection.classList.remove('show');
+            cartSection.style.display = 'none';
+        } else {
+            cartSection.style.display = 'block';
+            cartSection.classList.add('show');
+        }
+
         toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+    }
+
+    function handleCartForSmallerScreens() {
+        const isCartVisible = cartSection.classList.contains('show');
+
+        if (isCartVisible) {
+            cartSection.classList.add('slideOut');
+            cartSection.classList.remove('show');
+
+            setTimeout(() => {
+                cartSection.style.display = 'none';
+            }, 300);
+        } else {
+            cartSection.style.display = 'block';
+            setTimeout(() => {
+                cartSection.classList.add('show');
+                cartSection.style.opacity = '1';
+                cartSection.style.transform = 'translateY(0)';
+            }, 0);
+        }
+
+        toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+    }
+
+    toggleCartBtn.addEventListener("click", function () {
+        if (window.innerWidth < 1024) {
+            handleCartForSmallerScreens();
+        } else {
+            handleCartForLargerScreens();
+        }
     });
 
     closeCartBtn.addEventListener('click', function () {
-        const isCartVisible = cartSection.classList.contains('show');
-        cartSection.classList.toggle('show');
-        cartSection.style.display = isCartVisible ? 'none' : 'block';
-        toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+        if (window.innerWidth < 1024) {
+            handleCartForSmallerScreens();
+        } else {
+            handleCartForLargerScreens();
+        }
     });
 
-    observer.observe(document.querySelector('.cart-section'), {
+    observer.observe(cartSection, {
         childList: true,
         subtree: true
     });
@@ -434,13 +472,6 @@ function createCartItem(itemIdentifier, price) {
     separator.classList.add('cart-item-separator');
     cartItem.appendChild(separator);
 
-    const cartSection = document.querySelector(".cart-section");
-    cartSection.appendChild(cartItem);
-
-    cartSection.classList.add('show');
-    cartSection.style.display = 'block';
-    const toggleCartBtn = document.getElementById('toggleCartBtn');
-    toggleCartBtn.textContent = 'Fechar Carrinho';
     return cartItem;
 }
 
