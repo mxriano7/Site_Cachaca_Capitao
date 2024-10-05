@@ -140,11 +140,11 @@
 @media only screen and (max-width: 1024px) {
     .cart-section.show {
         display: block;
-        animation: slideInCart 0.3s forwards;
+        animation: slideInCart 0.5s forwards;
     }
 
     .cart-section {
-        animation: slideOutCart 0.4s forwards;
+        animation: slideOutCart 0.5s forwards;
     }
 
     .cart-section {
