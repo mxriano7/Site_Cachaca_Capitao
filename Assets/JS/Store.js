@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             setTimeout(() => {
                 cartSection.style.display = 'none';
-            }, 500);
+            }, 300);
         } else {
             cartSection.style.display = 'block';
             setTimeout(() => {
