@@ -658,11 +658,6 @@ function displayShippingOptions(options) {
             updateCartWithShipping(price);
         });
     });
-
-    const previousSelection = document.querySelector(`input[name="shippingOption"][value="${newSelectedOption}"]`);
-    if (previousSelection) {
-        previousSelection.checked = true;
-    }
 }
 
 // Atualiza o total do carrinho incluindo o custo de envio.
