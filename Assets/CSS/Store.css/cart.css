@@ -166,11 +166,11 @@
 @media only screen and (max-width: 1024px) {
     .cart-section.show {
         display: block;
-        animation: slideInCart 0.3s;
+        animation: slideInCart 0.3 forwards;
     }
 
     .cart-section {
-        animation: slideOutCart 0.3s;
+        animation: slideOutCart 0.3s forwards;
     }
 
     .cart-section {
