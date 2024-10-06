@@ -62,14 +62,16 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 cartSection.style.display = 'none';
             }, 300);
+
+            toggleCartBtn.textContent = 'Abrir Carrinho';
         } else {
             cartSection.style.display = 'block';
             setTimeout(() => {
                 cartSection.classList.add('show');
             }, 1);
-        }
 
-        toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+            toggleCartBtn.textContent = 'Fechar Carrinho';
+        }
     }
 
     toggleCartBtn.addEventListener("click", function () {
