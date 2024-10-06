@@ -2,10 +2,6 @@
     display: none;
 }
 
-.cart-section.show {
-    display: block;
-}
-
 .cart-section .cart {
     background-color: snow;
     border-radius: 1rem;
