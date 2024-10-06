@@ -672,7 +672,7 @@ function updateCartWithShipping(shippingCost) {
 
     cartItems.forEach(cartItem => {
         const priceText = cartItem.querySelector('.cart-price').textContent;
-        const price = parseFloat(priceText.replace('R$ ', '' ,'(Frete incluído)'));
+        const price = parseFloat(priceText.replace('R$ ', ''));
         const quantity = parseInt(cartItem.querySelector('.quantity').value);
 
         if (!isNaN(price) && !isNaN(quantity)) {
@@ -681,11 +681,12 @@ function updateCartWithShipping(shippingCost) {
         }
     });
 
-    if (!isNaN(shippingCost)) {
+    if (!isNaN(shippingCost) && shippingCost > 0) {
         total += shippingCost;
+        document.getElementById('totalAmount').textContent = `R$ ${total.toFixed(2)} (Frete incluído)`;
+    } else {
+        document.getElementById('totalAmount').textContent = `R$ ${total.toFixed(2)}`;
     }
-
-    document.getElementById('totalAmount').textContent = `R$ ${total.toFixed(2)}`;
 }
 
 // Atualiza o estado da última alteração do carrinho e, se o CEP não estiver vazio, chama a função debouncedFetchFreight.
