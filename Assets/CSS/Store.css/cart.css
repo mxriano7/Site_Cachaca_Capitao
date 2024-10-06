@@ -166,7 +166,7 @@
 @media only screen and (max-width: 1024px) {
     .cart-section.show {
         display: block;
-        animation: slideInCart 0.3 forwards;
+        animation: slideInCart 0.3s forwards;
     }
 
     .cart-section {
