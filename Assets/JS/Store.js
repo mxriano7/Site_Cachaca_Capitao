@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cartSection.style.display = 'none';
             }, 300);
         } else {
+            cartSection.style.display = 'block';
             setTimeout(() => {
                 cartSection.classList.add('show');
             }, 1);
