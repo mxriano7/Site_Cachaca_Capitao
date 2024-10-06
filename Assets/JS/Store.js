@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             cartSection.style.display = 'block';
             setTimeout(() => {
                 cartSection.classList.add('show');
-            }, 1);
+            }, 0);
 
             toggleCartBtn.textContent = 'Fechar Carrinho';
         }
