@@ -148,7 +148,7 @@
     width: auto;
     text-align: center;
     opacity: 0;
-    animation: fadeInOut 2.5s ease-out;
+    animation: fadeInOut 2.5s ease;
 }
 
 .version-btn {

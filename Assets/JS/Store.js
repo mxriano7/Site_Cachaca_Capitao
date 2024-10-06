@@ -56,8 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const isCartVisible = cartSection.classList.contains('show');
 
         if (isCartVisible) {
-            cartSection.classList.add('slideOutCart');
             cartSection.classList.remove('show');
+            cartSection.classList.remove('slideInCart');
+            cartSection.classList.add('slideOutCart');
 
             setTimeout(() => {
                 cartSection.style.display = 'none';
@@ -65,8 +66,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             toggleCartBtn.textContent = 'Abrir Carrinho';
         } else {
-            cartSection.style.display = 'block';
+            cartSection.classList.remove('slideOutCart');
+            cartSection.classList.add('slideInCart');
+
             setTimeout(() => {
+                cartSection.style.display = 'block';
                 cartSection.classList.add('show');
             }, 0);
 
