@@ -66,8 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
             cartSection.style.display = 'block';
             setTimeout(() => {
                 cartSection.classList.add('show');
-                cartSection.style.opacity = '1';
-                cartSection.style.transform = 'translateY(0)';
             }, 1);
         }
 
@@ -429,6 +427,21 @@ function createCartItem(itemIdentifier, price) {
     });
     cartItem.appendChild(removeButton);
 
+    // Nome do item
+    const cartName = document.createElement('span');
+    cartName.classList.add('cart-name');
+    cartName.textContent = itemIdentifier;
+    cartItem.appendChild(cartName);
+    cartItem.appendChild(document.createElement('br'));
+
+
+    // Preço do item
+    const cartPrice = document.createElement('span');
+    cartPrice.classList.add('cart-price');
+    cartPrice.textContent = `R$ ${price.toFixed(2)} (Unidade)`;
+    cartItem.appendChild(cartPrice);
+    cartItem.appendChild(document.createElement('br'));
+
     // Input de quantidade do produto
     const quantityInput = document.createElement('input');
     quantityInput.type = 'number';
@@ -444,28 +457,12 @@ function createCartItem(itemIdentifier, price) {
 
     });
     cartItem.appendChild(quantityInput);
-    cartItem.appendChild(document.createElement('br'));
-
-    // Nome do item
-    const cartName = document.createElement('span');
-    cartName.classList.add('cart-name');
-    cartName.textContent = itemIdentifier;
-    cartItem.appendChild(cartName);
-    cartItem.appendChild(document.createElement('br'));
-
-    // Preço do item
-    const cartPrice = document.createElement('span');
-    cartPrice.classList.add('cart-price');
-    cartPrice.textContent = `R$ ${price.toFixed(2)} (Unidade)`;
-    cartItem.appendChild(cartPrice);
-    cartItem.appendChild(document.createElement('br'));
 
     // Subtotal do item
     const subtotalSpan = document.createElement('span');
     subtotalSpan.classList.add('subtotal');
     subtotalSpan.textContent = `Subtotal: R$ ${price.toFixed(2)}`;
     cartItem.appendChild(subtotalSpan);
-    cartItem.appendChild(document.createElement('br'));
 
     // Divisória entre itens
     const separator = document.createElement('hr');
@@ -682,7 +679,7 @@ function updateCartWithShipping(shippingCost) {
         total += shippingCost;
     }
 
-    document.getElementById('totalAmount').textContent = `R$ ${total.toFixed(2)}`;
+    document.getElementById('totalAmount').textContent = `R$ ${total.toFixed(2)} (Frete incluído)`;
 }
 
 // Atualiza o estado da última alteração do carrinho e, se o CEP não estiver vazio, chama a função debouncedFetchFreight.

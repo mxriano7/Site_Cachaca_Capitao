@@ -40,6 +40,33 @@
     text-align: left;
 }
 
+.cart hr {
+    height: 1px;
+    background-color: brown;
+    width: 100%;
+}
+
+.cart-name {
+    font-weight: bold;
+    color: brown;
+    margin-left: 0.7em;
+    font-size: 1.2em;
+}
+
+.cart-price {
+    font-weight: bold;
+    color: #140f07;
+    margin-left: 3em;
+    font-size: 1em;
+}
+
+.subtotal {
+    font-weight: bold;
+    color: #140f07;
+    margin-left: 0.9em;
+    font-size: 1em;
+}
+
 .cart-section .cart input {
     border: 1px solid #ccc;
     border-radius: 100px;
@@ -66,7 +93,6 @@
     border: none;
     border-radius: 100px;
     text-align: center;
-    margin-right: 50px;
 }
 
 .removeBtn:hover {
@@ -187,12 +213,6 @@
         margin-bottom: 1rem;
     }
 
-    hr {
-        height: 1px;
-        background-color: brown;
-        width: 250px;
-    }
-
     #confirmButton {
         background-color: brown;
         color: snow;
@@ -240,9 +260,15 @@
         margin: 1rem auto;
     }
 
+    .cart hr {
+        height: 1px;
+        background-color: brown;
+        width: 300px;
+    }
+
     @keyframes slideInCart {
         from {
-            transform: translateX(100%);
+            transform: translateX(90%);
         }
 
         to {
@@ -256,7 +282,7 @@
         }
 
         to {
-            transform: translateX(100%);
+            transform: translateX(90%);
         }
     }
 }
