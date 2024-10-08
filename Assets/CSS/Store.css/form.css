@@ -321,17 +321,15 @@ form {
         color: #140f07;
         margin-bottom: 1rem;
         display: flex;
-        flex-direction: column;
     }
 
     .shipping-option {
-        width: 100%;
         display: flex;
         justify-content: center;
         text-align: center;
         background-color: brown;
         color: snow;
         padding: 0;
-        margin: 10px 0;
+        margin: 10px;
     }
 }
