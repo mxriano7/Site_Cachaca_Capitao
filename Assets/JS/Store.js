@@ -622,7 +622,7 @@ function displayShippingOptions(options) {
 
     if (options.length === 0) {
         const noOptionsMessage = document.createElement('div');
-        noOptionsMessage.textContent = 'Opções de Frete:';
+        noOptionsMessage.textContent = '';
         container.appendChild(noOptionsMessage);
         updateCartWithShipping(0);
         return;
@@ -638,6 +638,8 @@ function displayShippingOptions(options) {
             optionElement.classList.add('shipping-option');
             optionElement.innerHTML = `
                 <label>
+                <p>Opção de frete</p>
+                <br>
                     <input type="radio" name="shippingOption" value="${price}" data-service="${option.name}">
                     ${option.name}(Correios) - R$ ${price.toFixed(2)}<br>
                     Prazo para entrega: ${option.delivery_time} dias
