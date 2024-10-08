@@ -131,7 +131,7 @@ form {
 }
 
 .shipping-option {
-    width: 45%;
+    width: 50%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -331,7 +331,6 @@ form {
         text-align: center;
         background-color: brown;
         color: snow;
-        border-radius: 0;
         padding: 0;
         margin: 10px 0;
     }
