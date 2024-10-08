@@ -132,7 +132,7 @@ form {
 
 .shipping-option {
     width: 50%;
-    height: 40px;
+    height: auto;
     display: flex;
     justify-content: center;
     text-align: center;
