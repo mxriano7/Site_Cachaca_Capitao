@@ -622,10 +622,7 @@ function displayShippingOptions(options) {
 
     if (options.length === 0) {
         const noOptionsMessage = document.createElement('div');
-        noOptionsMessage.textContent = '';
-        noOptionElement.innerHTML = `
-        <h2>Opções de Frete:</h2>
-        `;
+        noOptionsMessage.textContent = 'Opções de Frete:';
         container.appendChild(noOptionsMessage);
         updateCartWithShipping(0);
         return;
