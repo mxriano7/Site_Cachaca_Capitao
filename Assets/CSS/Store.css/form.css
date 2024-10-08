@@ -123,7 +123,7 @@ form {
 
 #shippingOptionsContainer {
     width: 60%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: snow;
     color: #140f07;
