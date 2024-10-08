@@ -637,7 +637,7 @@ function displayShippingOptions(options) {
             const optionElement = document.createElement('div');
             optionElement.classList.add('shipping-option');
             optionElement.innerHTML = `
-                <label>Opção de Frete:
+                <label>Opção de Frete:<br>
                     <input type="radio" name="shippingOption" value="${price}" data-service="${option.name}">
                     ${option.name}(Correios) - R$ ${price.toFixed(2)}<br>
                     Prazo para entrega: ${option.delivery_time} dias
