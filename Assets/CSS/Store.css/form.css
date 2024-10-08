@@ -140,7 +140,7 @@ form {
     color: snow;
     border-radius: 5px;
     padding: 0;
-    margin: 0 1em;
+    margin: 0 0.5rem;
 }
 
 .shipping-option label {
