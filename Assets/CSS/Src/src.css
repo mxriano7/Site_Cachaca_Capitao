@@ -214,6 +214,10 @@ footer {
     text-align: center;
 }
 
+#footerInfo {
+    text-align: left;
+}
+
 #footerLogo img {
     max-width: 100%;
     height: auto;
@@ -254,6 +258,10 @@ footer h3 {
     footer p {
         font-size: calc(0.75rem + 0.5vw);
         margin-bottom: 1.2rem;
+    }
+
+    #footerInfo {
+        text-align: center;
     }
 }
 
