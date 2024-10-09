@@ -75,7 +75,7 @@ form {
 }
 
 .input {
-    border: solid 1.5px brown;
+    border: solid 2px brown;
     border-radius: 1rem;
     background: none;
     padding: 1rem;
@@ -89,7 +89,7 @@ form {
 
 .input:focus,
 .input:not(:placeholder-shown) {
-    border: 1.5px solid brown;
+    border: 2px solid brown;
     outline: none;
 }
 
@@ -168,7 +168,7 @@ form {
 
 #openCartInForm:hover,
 #closeFormBtn:hover {
-    background-color: black;
+    background-color: #140f07;
 }
 
 .animated-button {

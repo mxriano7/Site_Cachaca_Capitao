@@ -117,7 +117,7 @@ body {
     background-color: snow;
     color: #140f07;
     border-radius: 8px;
-    border: none;
+    border: 2px solid snow;
     margin-top: 15px;
     margin-right: 1em;
     padding: 0.75rem 1.5rem;
@@ -133,6 +133,8 @@ body {
 
 #toggleCartBtn:active {
     transform: scale(0.95);
+    border-radius: 20px;
+    color: snow;
 }
 
 #toggleCartBtn:hover {
