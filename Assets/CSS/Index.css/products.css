@@ -149,4 +149,8 @@
     .card, .head {
         opacity: 1;
     }
+
+    .card:last-child {
+        margin-right: 1rem;
+    }
 }
