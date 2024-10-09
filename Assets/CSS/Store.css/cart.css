@@ -182,11 +182,9 @@
     }
 
     #confirmButton {
-        background-color: brown;
         color: snow;
         padding: 10px;
         margin-top: 1em;
-        border: none;
         border-radius: 5px;
         cursor: pointer;
         width: 250px;
@@ -194,7 +192,7 @@
     }
 
     #confirmButton:hover {
-        background-color: #140f07;
+        transform: scale(1.0);
         border-radius: 20px;
     }
 

@@ -188,12 +188,11 @@ body {
         animation-delay: 2.5s;
     }
 
-    
     #toggleCartBtn {
         border-radius: 12px;
         padding: 6px 14px;
         font-size: 1rem;
+        margin: 1em auto;
         animation-delay: 2.5s;
-        margin: 1rem auto;
     }
 }
