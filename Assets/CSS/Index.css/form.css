@@ -48,7 +48,7 @@
 
 #sendContactBtn {
     display: inline-block;
-    border: none;
+    border: 2px solid snow;
     color: #140f07;
     background-color: snow;
     padding: 10px 20px;
