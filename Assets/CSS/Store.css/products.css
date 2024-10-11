@@ -154,7 +154,7 @@
 .version-btn {
     background-color: brown;
     color: snow;
-    border: none;
+    border: 2px solid #140f07;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -179,7 +179,7 @@
     padding: 0.8em;
     background-color: brown;
     color: snow;
-    border: none;
+    border: 2px solid #140f07;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
