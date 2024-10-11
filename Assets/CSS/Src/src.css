@@ -227,14 +227,14 @@ footer {
     height: auto;
 }
 
-#footerInfo a {
+footer a {
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: snow;
     transition: color 0.3s ease;
 }
 
-#footerInfo a:hover {
+footer a:hover {
     color: brown;
 }
 
