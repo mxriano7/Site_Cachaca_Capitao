@@ -244,8 +244,8 @@ input[type=number]::-webkit-outer-spin-button {
 
     .version-btn {
         font-size: 0.9rem;
-        padding: 8px 12px;
-        margin: 0 1.2em;
+        padding: 8px 10px;
+        margin: 0 1em;
     }
 
     .kit-selection {
