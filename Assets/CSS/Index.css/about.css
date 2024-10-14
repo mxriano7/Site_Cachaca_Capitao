@@ -146,10 +146,11 @@
     color: snow;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1224px) {
     #about {
         height: auto;
     }
+
     #aboutContent {
         max-width: 100%;
         display: flex;
@@ -180,7 +181,9 @@
     }
 
     #about a {
-        padding: 6px 10px;
-        font-size: 0.9rem;
+        text-align: center;
+        padding: 4px 6px;
+        font-size: 1rem;
+        width: 90px
     }
 }

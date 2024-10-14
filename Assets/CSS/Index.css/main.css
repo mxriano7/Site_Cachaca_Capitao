@@ -161,7 +161,7 @@ body {
     overflow: hidden;
 }
 
-@media only screen and (max-width: 1210px) {
+@media only screen and (max-width: 1236px) {
     #main {
         background-size: cover;
         background-position: center;
@@ -217,7 +217,7 @@ body {
     }
 
     .new-loading-message{
-        font-size: 0.5rem;
+        font-size: 0.4rem;
     }
 
     .new-spinner {

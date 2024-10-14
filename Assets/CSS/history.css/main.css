@@ -53,7 +53,8 @@ body {
     background-size: 100% 100%;
     background-color: #00000088;
     background-blend-mode: darken;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     color: snow;
     border-bottom: 1px solid snow;
     padding: 0 20px;
@@ -74,7 +75,6 @@ body {
 #history p {
     font-weight: bold;
     font-size: 1.2em;
-    margin-bottom: 20px;
     text-align: justify;
     text-indent: 2em;
     word-wrap: break-word;
@@ -88,7 +88,7 @@ body {
 }
 
 #history p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 1em;
 }
 
 @media screen and (max-width: 1024px) {
