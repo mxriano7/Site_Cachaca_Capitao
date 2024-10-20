@@ -628,29 +628,22 @@ function displayShippingOptions(options) {
         return;
     }
 
-    let newSelectedOption = selectedShippingOption;
-
     options.forEach(option => {
         const price = parseFloat(option.price);
 
         if (!isNaN(price)) {
             const optionElement = document.createElement('div');
             optionElement.classList.add('shipping-option');
-            const isMobileView = window.innerWidth < 1300;
 
             optionElement.innerHTML = `
                 <label>
                     <input type="radio" name="shippingOption" value="${price}" data-service="${option.name}">
-                    ${option.name}(Correios) - R$ ${price.toFixed(2)}${isMobileView ? '<br>' : ' '}
+                    ${option.name}(Correios) - R$ ${price.toFixed(2)}'<br>'
                     Prazo para entrega: ${option.delivery_time} dias
                 </label>
             `;
 
             container.appendChild(optionElement);
-
-            if (price === selectedShippingOption) {
-                newSelectedOption = price;
-            }
         }
     });
 

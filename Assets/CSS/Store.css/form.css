@@ -136,7 +136,7 @@ form {
 }
 
 .shipping-option {
-    width: 70%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: left;
@@ -334,8 +334,6 @@ form {
         display: flex;
         flex-direction: column;
         text-align: center;
-        justify-content: center;
-        align-items: center;
         padding: 1em 0;
     }
 
