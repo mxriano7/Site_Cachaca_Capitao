@@ -132,10 +132,11 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .shipping-option {
-    width: 100%;
+    width: 70%;
     height: auto;
     display: flex;
     justify-content: left;
@@ -144,7 +145,7 @@ form {
     color: snow;
     border-radius: 5px;
     padding: 0;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .shipping-option label {
