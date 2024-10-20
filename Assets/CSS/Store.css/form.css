@@ -318,6 +318,8 @@ form {
     }
 
     #shippingOptionsColumn {
+        display: flex;
+        flex-direction: column;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -326,7 +328,7 @@ form {
 
     #shippingOptionsContainer {
         width: 100%;
-        max-width: 100%;
+        max-width: none;
         background-color: snow;
         color: #140f07;
         margin-bottom: 1rem;
