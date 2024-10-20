@@ -639,8 +639,7 @@ function displayShippingOptions(options) {
             optionElement.innerHTML = `
                 <label>
                     <input type="radio" name="shippingOption" value="${price}" data-service="${option.name}">
-                    ${option.name}(Correios) - R$ ${price.toFixed(2)}<br>
-                    Prazo para entrega: ${option.delivery_time} dias
+                    ${option.name}(Correios) - R$ ${price.toFixed(2)} Prazo para entrega: ${option.delivery_time} dias
                 </label>
             `;
             container.appendChild(optionElement);
@@ -725,7 +724,7 @@ function moveSubmitButton() {
     var originalPosition = document.querySelector('.form-column');
 
     if (submitBtn && form && originalPosition) {
-        if (window.innerWidth <= 1024) {
+        if (window.innerWidth <= 1300) {
             form.appendChild(submitBtn);
         } else {
             originalPosition.appendChild(submitBtn);
