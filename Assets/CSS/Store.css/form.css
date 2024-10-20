@@ -16,7 +16,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -38,6 +37,30 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/* 
+.shipping-option {
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: brown;
+    color: snow;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0 0.5rem;
+}
+
+.shipping-option label {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.shipping-option:hover {
+    background-color: #140f07;
+} */
 
 details {
     margin-bottom: 20px;
@@ -135,30 +158,6 @@ form {
     height: 50px;
     border: none;
     border-radius: 5px;
-}
-
-.shipping-option {
-    width: 45%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: brown;
-    color: snow;
-    border-radius: 5px;
-    padding: 0;
-    margin: 0 0.5rem;
-}
-
-.shipping-option label {
-    display: block;
-    width: 100%;
-    padding: 2px;
-    cursor: pointer;
-}
-
-.shipping-option:hover {
-    background-color: #140f07;
 }
 
 #openCartInForm,
