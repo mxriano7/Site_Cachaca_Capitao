@@ -323,7 +323,7 @@ form {
         text-align: center;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
 
     #shippingOptionsContainer {
@@ -342,6 +342,6 @@ form {
     }
 
     .animated-button {
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
 }
