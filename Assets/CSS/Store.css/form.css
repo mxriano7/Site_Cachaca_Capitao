@@ -125,7 +125,8 @@ form {
     border: solid 2px brown;
     border-radius: 1rem;
     padding: 1em;
-    width: 100%;
+    width: auto;
+    min-width: 60%;
     background-color: snow;
     color: #140f07;
     display: flex;
@@ -319,6 +320,7 @@ form {
         text-align: center;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2em;
     }
 
     #shippingOptionsContainer {
