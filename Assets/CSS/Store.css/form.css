@@ -47,8 +47,8 @@ form {
 }
 
 .form-column {
-    margin: 0 0.5rem;
-    width: auto;
+    width: 30%;
+    margin: auto;
 }
 
 .input-row {
