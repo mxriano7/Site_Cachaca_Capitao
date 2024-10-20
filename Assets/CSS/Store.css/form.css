@@ -125,7 +125,7 @@ form {
     border: solid 2px brown;
     border-radius: 1rem;
     padding: 1rem;
-    width: auto;
+    width: 100%;
     background-color: snow;
     color: #140f07;
     display: flex;
