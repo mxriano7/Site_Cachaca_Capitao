@@ -286,91 +286,102 @@
           estamos comprometidos em oferecer uma experiência de compra confiável.
         </p>
       </details>
+
       <div id="formNavBar">
         <div>
           <button id="closeFormBtn">Voltar</button>
           <button id="openCartInForm" type="button">Carrinho</button>
         </div>
-        <div id="shippingOptionsContainer">
-        </div>
       </div>
+
       <form id="orderForm" method="POST">
-        <!-- Coluna esquerda -->
-        <div id="idFormColumn" class="form-column">
-          <h2>Dados Pessoais:</h2>
-          <div class="input-group">
-            <input type="text" id="firstName" name="firstName" placeholder="Nome" required aria-label="Nome"
-              maxlength="20" class="input">
-            <label for="firstName" class="user-label">Nome</label>
-          </div>
-          <div class="input-group">
-            <input type="text" id="lastName" name="lastName" placeholder="Sobrenome" required aria-label="Sobrenome"
-              maxlength="30" class="input">
-            <label for="lastName" class="user-label">Sobrenome</label>
-          </div>
-          <div class="input-group">
-            <input type="text" id="cpfCnpj" name="cpfCnpj" placeholder="CPF ou CNPJ" required aria-label="CPF ou CNPJ"
-              minlength="14" maxlength="18" pattern="[0-9]+" class="input">
-            <label for="cpfCnpj" class="user-label">CPF ou CNPJ</label>
-          </div>
-          <div class="input-group">
-            <input type="email" id="email" name="email" required aria-label="E-mail" aria-describedby="emailError"
-              class="input" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-            <label for="email" class="user-label" id="emailLabel">Digite seu e-mail</label>
-          </div>
-          <div class="input-group">
-            <input type="tel" id="telephone" name="telephone" placeholder="Telefone/Celular" required
-              aria-label="Telefone/Celular" maxlength="30" class="input">
-            <label for="telephone" class="user-label">Telefone/Celular</label>
-          </div>
-          <button id="submitOrderBtn" type="button" class="animated-button">
-            <svg viewBox="0 0 24 24" class="arr-2" xmlns="https://www.w3.org/2000/svg">
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-              </path>
-            </svg>
-            <span class="text">Finalizar Pedido</span>
-            <span class="circle"></span>
-            <svg viewBox="0 0 24 24" class="arr-1" xmlns="https://www.w3.org/2000/svg">
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-              </path>
-            </svg>
-          </button>
-        </div>
-        <!-- Coluna direita -->
-        <div id="addressFormColumn" class="form-column">
-          <h2>Endereço:</h2>
-          <div class="input-group">
-            <input type="text" id="cep" name="cep" placeholder="CEP" required aria-label="CEP" class="input">
-            <label for="cep" class="user-label">CEP</label>
-          </div>
-          <div class="input-group">
-            <input type="text" id="address" name="address" placeholder="Endereço" required aria-label="Endereço"
-              autocomplete="off" class="input">
-            <label for="address" class="user-label">Endereço</label>
-          </div>
-          <div class="input-row">
+        <div class="form-columns">
+          <!-- Coluna 1: Dados Pessoais -->
+          <div id="idFormColumn" class="form-column">
+            <h2>Dados Pessoais:</h2>
             <div class="input-group">
-              <input type="text" id="city" name="city" placeholder="Cidade" required aria-label="Cidade" maxlength="40"
-                class="input">
-              <label for="city" class="user-label">Cidade</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Nome" required aria-label="Nome"
+                maxlength="20" class="input">
+              <label for="firstName" class="user-label">Nome</label>
             </div>
             <div class="input-group">
-              <input type="text" id="state" name="state" placeholder="Estado" required aria-label="Estado"
+              <input type="text" id="lastName" name="lastName" placeholder="Sobrenome" required aria-label="Sobrenome"
                 maxlength="30" class="input">
-              <label for="state" class="user-label">Estado</label>
+              <label for="lastName" class="user-label">Sobrenome</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="cpfCnpj" name="cpfCnpj" placeholder="CPF ou CNPJ" required aria-label="CPF ou CNPJ"
+                minlength="14" maxlength="18" pattern="[0-9]+" class="input">
+              <label for="cpfCnpj" class="user-label">CPF ou CNPJ</label>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" name="email" required aria-label="E-mail" aria-describedby="emailError"
+                class="input" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+              <label for="email" class="user-label" id="emailLabel">Digite seu e-mail</label>
+            </div>
+            <div class="input-group">
+              <input type="tel" id="telephone" name="telephone" placeholder="Telefone/Celular" required
+                aria-label="Telefone/Celular" maxlength="30" class="input">
+              <label for="telephone" class="user-label">Telefone/Celular</label>
+            </div>
+            <button id="submitOrderBtn" type="button" class="animated-button">
+              <svg viewBox="0 0 24 24" class="arr-2" xmlns="https://www.w3.org/2000/svg">
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+              </svg>
+              <span class="text">Finalizar Pedido</span>
+              <span class="circle"></span>
+              <svg viewBox="0 0 24 24" class="arr-1" xmlns="https://www.w3.org/2000/svg">
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Coluna 2: Endereço -->
+          <div id="addressFormColumn" class="form-column">
+            <h2>Endereço:</h2>
+            <div class="input-group">
+              <input type="text" id="cep" name="cep" placeholder="CEP" required aria-label="CEP" class="input">
+              <label for="cep" class="user-label">CEP</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="address" name="address" placeholder="Endereço" required aria-label="Endereço"
+                autocomplete="off" class="input">
+              <label for="address" class="user-label">Endereço</label>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <input type="text" id="city" name="city" placeholder="Cidade" required aria-label="Cidade"
+                  maxlength="40" class="input">
+                <label for="city" class="user-label">Cidade</label>
+              </div>
+              <div class="input-group">
+                <input type="text" id="state" name="state" placeholder="Estado" required aria-label="Estado"
+                  maxlength="30" class="input">
+                <label for="state" class="user-label">Estado</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <input type="text" id="addressNumber" name="addressNumber" placeholder="Número" required
+                aria-label="Número" maxlength="10" class="input">
+              <label for="addressNumber" class="user-label">Número</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="addressComplement" name="addressComplement" placeholder="Complemento do Endereço"
+                aria-label="Complemento de Endereço" class="input">
+              <label for="addressComplement" class="user-label">Complemento do Endereço</label>
             </div>
           </div>
-          <div class="input-group">
-            <input type="text" id="addressNumber" name="addressNumber" placeholder="Número" required aria-label="Número"
-              maxlength="10" class="input">
-            <label for="addressNumber" class="user-label">Número</label>
-          </div>
-          <div class="input-group">
-            <input type="text" id="addressComplement" name="addressComplement" placeholder="Complemento do Endereço"
-              aria-label="Complemento de Endereço" class="input">
-            <label for="addressComplement" class="user-label">Complemento do Endereço</label>
+
+          <!-- Coluna 3: Opções de Frete -->
+          <div id="shippingOptionsColumn" class="form-column">
+            <h2>Opções de Frete:</h2>
+            <div id="shippingOptionsContainer">
+              <!-- Opções de frete geradas dinamicamente por JavaScript -->
+            </div>
           </div>
         </div>
       </form>
