@@ -328,7 +328,6 @@ form {
         justify-content: flex-start;
         align-items: flex-start;
         display: flex;
-        flex-direction: row;
         margin: 1rem;
     }
 }
