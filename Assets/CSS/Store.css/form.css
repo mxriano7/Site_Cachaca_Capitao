@@ -130,19 +130,22 @@ form {
     color: #140f07;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .shipping-option {
-    width: 55%;
-    height: auto;
+    width: 300px;
     display: flex;
-    justify-content: left;
-    text-align: left;
+    text-align: center;
+    margin: 10px;
+    height: auto;
+    justify-content: center;
     background-color: brown;
     color: snow;
     border-radius: 5px;
     padding: 0;
-    margin: 10px;
 }
 
 .shipping-option label {
@@ -326,11 +329,6 @@ form {
         background-color: snow;
         color: #140f07;
         margin-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
         padding: 0;
     }
 
