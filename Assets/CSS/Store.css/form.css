@@ -324,11 +324,11 @@ form {
     }
 
     .shipping-option {
-        width: 40%;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
         display: flex;
         flex-direction: row;
-        background-color: brown;
-        color: snow;
         margin: 1rem;
     }
 }
