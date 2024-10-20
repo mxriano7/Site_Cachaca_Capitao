@@ -314,8 +314,8 @@ form {
 
     #shippingOptionsContainer {
         width: 100%;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         background-color: snow;
         color: #140f07;
         margin-bottom: 1rem;
@@ -325,8 +325,6 @@ form {
 
     .shipping-option {
         width: 55%;
-        justify-content: flex-start;
-        align-items: flex-start;
         display: flex;
         margin: 1rem 0;
     }
