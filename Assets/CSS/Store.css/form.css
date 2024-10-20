@@ -123,8 +123,6 @@ form {
 
 #shippingOptionsContainer {
     width: 100%;
-    justify-content: center;
-    align-items: center;
     background-color: snow;
     color: #140f07;
     display: flex;
@@ -132,10 +130,10 @@ form {
 }
 
 .shipping-option {
-    width: 60%;
+    width: 55%;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     text-align: left;
     background-color: brown;
     color: snow;
