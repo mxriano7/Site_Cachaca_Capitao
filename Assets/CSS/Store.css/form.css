@@ -126,15 +126,16 @@ form {
     border-radius: 1rem;
     padding: 1em;
     width: auto;
-    max-width: 60%;
+    max-width: 70%;
     background-color: snow;
     color: #140f07;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .shipping-option {
-    width: 55%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: left;
