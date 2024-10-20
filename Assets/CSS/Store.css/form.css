@@ -41,13 +41,13 @@ details p {
 
 form {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     background-color: snow;
 }
 
 .form-column {
     width: 30%;
+    margin: 0 auto;
 }
 
 .input-row {
@@ -109,7 +109,7 @@ form {
     pointer-events: none;
     transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: snow;
-    padding: 0 .2em;
+    padding: 0 2em;
 }
 
 #formNavBar {
@@ -122,6 +122,7 @@ form {
 }
 
 #shippingOptionsContainer {
+    border: solid 2px brown;
     width: 100%;
     background-color: snow;
     color: #140f07;
@@ -138,14 +139,14 @@ form {
     background-color: brown;
     color: snow;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0;
     margin: 10px 0;
 }
 
 .shipping-option label {
     display: block;
     width: 100%;
-    padding: 2px;
+    padding: 3px;
     cursor: pointer;
 }
 
