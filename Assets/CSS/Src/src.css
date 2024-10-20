@@ -252,7 +252,7 @@ footer h3 {
     footer {
         flex-direction: column;
         text-align: center;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     footer h3 {

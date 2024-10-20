@@ -331,8 +331,9 @@ form {
     }
 
     .shipping-option {
-        width: 75%;
+        width: 300px;
         display: flex;
+        text-align: center;
         margin: 10px 0;
     }
 }
