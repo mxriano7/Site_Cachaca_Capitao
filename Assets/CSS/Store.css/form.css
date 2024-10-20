@@ -126,7 +126,7 @@ form {
     border-radius: 1rem;
     padding: 1em;
     width: auto;
-    min-width: 60%;
+    max-width: 60%;
     background-color: snow;
     color: #140f07;
     display: flex;
@@ -325,6 +325,7 @@ form {
 
     #shippingOptionsContainer {
         width: 100%;
+        max-width: 100%;
         background-color: snow;
         color: #140f07;
         margin-bottom: 1rem;
