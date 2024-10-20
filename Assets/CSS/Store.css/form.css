@@ -139,8 +139,7 @@ form {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: left;
-    text-align: left;
+    text-align: center;
     background-color: brown;
     color: snow;
     border-radius: 5px;
@@ -331,16 +330,11 @@ form {
         background-color: snow;
         color: #140f07;
         margin-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
         text-align: center;
         padding: 1em 0;
     }
 
     .shipping-option {
         width: 300px;
-        display: flex;
-        text-align: center;
-        margin: 10px 0;
     }
 }
