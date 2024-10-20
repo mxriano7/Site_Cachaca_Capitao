@@ -43,11 +43,11 @@ form {
     display: flex;
     width: 100%;
     background-color: snow;
+    justify-content: space-between;
 }
 
 .form-column {
     width: 30%;
-    margin: 0 auto;
 }
 
 .input-row {
@@ -109,7 +109,7 @@ form {
     pointer-events: none;
     transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: snow;
-    padding: 0 2em;
+    padding: 0 0.2em;
 }
 
 #formNavBar {
@@ -123,6 +123,8 @@ form {
 
 #shippingOptionsContainer {
     border: solid 2px brown;
+    border-radius: 1rem;
+    padding: 1rem;
     width: 100%;
     background-color: snow;
     color: #140f07;
@@ -140,7 +142,7 @@ form {
     color: snow;
     border-radius: 5px;
     padding: 0;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .shipping-option label {
