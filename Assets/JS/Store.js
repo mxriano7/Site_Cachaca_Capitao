@@ -736,25 +736,25 @@ function moveSubmitButton() {
 window.addEventListener('resize', moveSubmitButton);
 window.addEventListener('load', moveSubmitButton);
 
-// Função para manusear a posição do frete conforme o tamanho da tela.
-function moveShippingOptions() {
-    const shippingOptions = document.getElementById('shippingOptionsContainer');
-    const addressColumn = document.getElementById('addressFormColumn');
+// // Função para manusear a posição do frete conforme o tamanho da tela.
+// function moveShippingOptions() {
+//     const shippingOptions = document.getElementById('shippingOptionsContainer');
+//     const addressColumn = document.getElementById('addressFormColumn');
 
-    if (window.innerWidth < 1024) {
-        if (!addressColumn.contains(shippingOptions)) {
-            addressColumn.appendChild(shippingOptions);
-        }
-    } else {
-        const formNavBar = document.getElementById('formNavBar');
-        if (formNavBar && !formNavBar.contains(shippingOptions)) {
-            formNavBar.appendChild(shippingOptions);
-        }
-    }
-}
+//     if (window.innerWidth < 1024) {
+//         if (!addressColumn.contains(shippingOptions)) {
+//             addressColumn.appendChild(shippingOptions);
+//         }
+//     } else {
+//         const formNavBar = document.getElementById('formNavBar');
+//         if (formNavBar && !formNavBar.contains(shippingOptions)) {
+//             formNavBar.appendChild(shippingOptions);
+//         }
+//     }
+// }
 
-window.addEventListener('DOMContentLoaded', moveShippingOptions);
-window.addEventListener('resize', moveShippingOptions);
+// window.addEventListener('DOMContentLoaded', moveShippingOptions);
+// window.addEventListener('resize', moveShippingOptions);
 
 // Valida a quantidade do produto, garantindo que fique entre 1 e 12.
 function validateQuantity(input) {
