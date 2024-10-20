@@ -124,7 +124,7 @@ form {
 #shippingOptionsContainer {
     border: solid 2px brown;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 1em;
     width: 100%;
     background-color: snow;
     color: #140f07;
@@ -331,7 +331,7 @@ form {
         text-align: center;
         justify-content: center;
         align-items: center;
-        padding: 0;
+        padding: 1em 0;
     }
 
     .shipping-option {
