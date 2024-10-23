@@ -126,7 +126,7 @@ form {
     border-radius: 1rem;
     padding: 1em;
     width: auto;
-    max-width: 70%;
+    max-width: 76%;
     background-color: snow;
     color: #140f07;
     display: flex;
@@ -277,9 +277,21 @@ form {
 
     #orderFormContainer h2 {
         font-size: 1.5rem;
+        text-align: center;
+    }
+
+    details {
+        margin: 0 auto;
+    }
+
+    details summary {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
     }
 
     details p {
+        text-align: left;
         font-size: 1rem;
     }
 
@@ -296,7 +308,7 @@ form {
 
     #formNavBar {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 10px;
     }
@@ -327,6 +339,10 @@ form {
     }
 
     #shippingOptionsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         max-width: none;
         background-color: snow;
