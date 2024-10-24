@@ -178,7 +178,7 @@ body {
         opacity: 0;
         animation: fadeIn 1.5s ease-out forwards;
         animation-delay: 1s;
-        margin: 140px 1em 1em 1em;
+        margin: 130px 1em 1em 1em;
     }
 
     #mainContent {

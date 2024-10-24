@@ -146,7 +146,7 @@
         top: 0;
         right: 0;
         width: 90%;
-        height: 100vh;
+        height: 100dvh;
         background: snow;
         box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
         z-index: 1050;
