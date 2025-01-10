@@ -826,43 +826,21 @@ const debouncedFetchFreight = debounce(fetchFreight, 1000);
 function searchAddress() {
     const cep = document.getElementById('cep').value;
     if (cep.length === 9) {
-        // Lista de serviços para fallback
-        const services = [
-            `https://brasilapi.com.br/api/cep/v2/${cep}`,
-            `https://opencep.com/v1/${cep}`
-        ];
-
-        let fetched = false; // Flag para verificar se um serviço respondeu
-
-        // Tentar buscar de cada serviço
-        const tryFetch = async (url) => {
-            try {
-                const response = await fetch(url);
-                if (response.ok) {
-                    const data = await response.json();
-                    if (!data.erro) {
-                        document.getElementById('address').value = data.logradouro || 'Não disponível';
-                        document.getElementById('city').value = data.localidade || data.cidade || 'Não disponível';
-                        document.getElementById('state').value = data.uf || 'Não disponível';
-                        fetched = true; // Marca como sucesso
-                        return; // Finaliza após sucesso
-                    }
+        fetch(`https://brasilapi.com.br/api/cep/v2/${cep}`)
+            .then(response => response.json())
+            .then(data => {
+                if (!data.erro) {
+                    document.getElementById('address').value = data.logradouro;
+                    document.getElementById('city').value = data.localidade;
+                    document.getElementById('state').value = data.uf;
+                } else {
+                    alert('CEP não encontrado! Por favor verifique o CEP digitado.');
                 }
-            } catch (error) {
-                console.error(`Erro ao buscar no serviço ${url}:`, error);
-            }
-        };
-
-        // Chamar serviços em sequência até um sucesso
-        (async function fetchWithFallback() {
-            for (const url of services) {
-                await tryFetch(url);
-                if (fetched) break; // Sai do loop se tiver sucesso
-            }
-            if (!fetched) {
-                alert('Todos os serviços de CEP estão indisponíveis no momento. Por favor, tente mais tarde.');
-            }
-        })();
+            })
+            .catch(error => {
+                console.error('Erro ao buscar endereço:', error);
+                alert('Ocorreu um erro ao buscar o endereço. Por favor tente novamente mais tarde.');
+            });
     } else {
         alert('Por favor insira um CEP válido.');
     }
