@@ -826,7 +826,7 @@ const debouncedFetchFreight = debounce(fetchFreight, 1000);
 function searchAddress() {
     const cep = document.getElementById('cep').value;
     if (cep.length === 9) {
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        fetch(`https://servercachacacapitao.vercel.app/proxy-viacep?cep=${cep}`)
             .then(response => response.json())
             .then(data => {
                 if (!data.erro) {
