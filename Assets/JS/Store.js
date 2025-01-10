@@ -826,8 +826,7 @@ const debouncedFetchFreight = debounce(fetchFreight, 1000);
 function searchAddress() {
     const cep = document.getElementById('cep').value;
     if (cep.length === 9) {
-        // Corrigido: Adicionando as aspas para formar a URL corretamente
-        fetch(`https://opencep.com/v1/${cep}`)
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
             .then(response => response.json())
             .then(data => {
                 if (!data.erro) {
