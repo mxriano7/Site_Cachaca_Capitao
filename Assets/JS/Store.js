@@ -828,7 +828,6 @@ function searchAddress() {
     if (cep.length === 9) {
         // Lista de serviços para fallback
         const services = [
-            `https://servercachacacapitao.vercel.app/proxy-viacep?cep=${cep}`,
             `https://brasilapi.com.br/api/cep/v2/${cep}`,
             `https://opencep.com/v1/${cep}`
         ];
