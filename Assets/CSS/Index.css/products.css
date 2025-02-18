@@ -73,7 +73,7 @@
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    height: 82vmin;
+    height: 75vmin;
 }
 
 .card img {
@@ -147,9 +147,13 @@
     }
 
     .card {
-        height: 400px;
+        height: 300px;
         width: 90%;
         flex: none;
+    }
+
+    .head {
+        padding: 0.5em 0.7em;
     }
 
     .card, .head {

@@ -233,6 +233,11 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 0.9rem;
     }
 
+    .product-info {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+
     .product-title,
     .product-price {
         font-size: 1.2rem;
