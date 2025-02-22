@@ -187,9 +187,9 @@ a:hover .tooltiptext {
 
     .slogan {
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-        width: calc(40% + 2vw);
+        width: calc(42% + 2vw);
         text-align: center;
-        font-size: calc(1rem + 2vw);
+        font-size: calc(1rem + 1.75vw);
     }
 
     .logo {
