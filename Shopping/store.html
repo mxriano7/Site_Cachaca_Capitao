@@ -6,7 +6,7 @@
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-PZ6SWSJ3CB');
@@ -16,16 +16,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self'; 
-      style-src 'self' https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
-      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
-      script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='; 
-      connect-src 'self' 
-          https://viacep.com.br 
-          https://servercachacacapitao.vercel.app/calculateFreight 
-          https://servercachacacapitao.vercel.app/sendOrder 
-          https://servercachacacapitao.vercel.app/proxy-viacep 
-          https://www.googletagmanager.com/gtag/js?id=G-PZ6SWSJ3CB;">
+  default-src 'self'; 
+  style-src 'self' https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+  font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; 
+  script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='; 
+  connect-src 'self' 
+    https://viacep.com.br 
+    https://servercachacacapitao.vercel.app/calculateFreight 
+    https://servercachacacapitao.vercel.app/sendOrder 
+    https://servercachacacapitao.vercel.app/proxy-viacep 
+    https://www.googletagmanager.com 
+    https://www.google-analytics.com; 
+  report-to default; 
+  attribution-reporting 'self'">
   <link rel="icon" type="image/png" href="../Assets/Img/Src/Logo(1).jpg">
   <title>Loja</title>
   <link rel="stylesheet" href="../Assets/CSS/Src/src.css" />
@@ -330,7 +333,8 @@
           </div>
           <div class="input-group">
             <input type="email" id="email" name="email" required aria-label="E-mail" aria-describedby="emailError"
-              class="input" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+              class="input" placeholder="Digite seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              autocomplete="email" />
             <label for="email" class="user-label" id="emailLabel">Digite seu e-mail</label>
           </div>
           <div class="input-group">
@@ -405,7 +409,8 @@
       <p><strong>Contato: </strong><a href="https://wa.me/553299970126">WhatsApp</a></p>
       <p><strong>Localização:</strong> 37310-000 (CEP)<br />BR 267 | Km 193, Bom Jardim de Minas, MG, Brasil</p>
       <p><strong>Horário de Funcionamento:</strong><br />Segunda a Sexta, das 8h às 16h</p>
-      <p><strong>Desenvolvido por:</strong><br /><a href="https://paulomarianodev.vercel.app/" target="_blank">Paulo Mariano || Full Stack Developer</a></p>
+      <p><strong>Desenvolvido por:</strong><br /><a href="https://paulomarianodev.vercel.app/" target="_blank">Paulo
+          Mariano || Full Stack Developer</a></p>
     </div>
     <div id="footerLogo">
       <img src="../Assets/Img/Src/Logo(2)-PNG.png" alt="Logo" class="logo">

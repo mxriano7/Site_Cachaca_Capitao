@@ -226,6 +226,10 @@ input[type=number]::-webkit-outer-spin-button {
 
     .description-section {
         font-size: 0.9rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .description-section h3,
