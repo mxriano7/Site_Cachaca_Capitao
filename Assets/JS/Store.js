@@ -38,6 +38,37 @@ document.addEventListener('DOMContentLoaded', function () {
         handleRemoveProductListeners();
     });
 
+    if (window.innerWidth <= 1024) {
+        const toggleCartBtn = document.getElementById("toggleCartBtn");
+        toggleCartBtn.style.animation = "none";
+        toggleCartBtn.style.transition = "none";
+        toggleCartBtn.style.opacity = "1";
+    }
+
+    const products = document.getElementById('products');
+    const originalParent = toggleCartBtn.parentElement;
+    const originalNextSibling = toggleCartBtn.nextSibling;
+
+    function moveToggleCartBtn() {
+        if (window.innerWidth < 1236) {
+            const h1 = products.querySelector('h1');
+            if (toggleCartBtn.parentElement !== products) {
+                products.insertBefore(toggleCartBtn, h1.nextSibling);
+            }
+        } else {
+            if (toggleCartBtn.parentElement !== originalParent) {
+                if (originalNextSibling) {
+                    originalParent.insertBefore(toggleCartBtn, originalNextSibling);
+                } else {
+                    originalParent.appendChild(toggleCartBtn);
+                }
+            }
+        }
+    }
+
+    window.addEventListener('load', moveToggleCartBtn);
+    window.addEventListener('resize', moveToggleCartBtn);
+
     function updateCartButton(isCartVisible) {
         const isMobile = window.innerWidth <= 1024;
 

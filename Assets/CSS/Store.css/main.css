@@ -196,7 +196,6 @@ body {
         bottom: 1em;
         right: 1em;
         z-index: 3000;
-        animation: fadeIn 1.5s ease-out forwards;
         background-color: #140f07;
         color: snow;
         border: 2px solid snow;

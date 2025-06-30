@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInSrc {
     from {
         opacity: 0;
     }
@@ -38,7 +38,7 @@ html {
     transition: transform 0.5s ease;
     z-index: 1000;
     opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeInSrc 1s ease-out forwards;
 }
 
 .nav-links {
@@ -95,7 +95,7 @@ html {
     width: 100px;
     color: brown;
     text-align: center;
-    z-index: 1;
+    z-index: 3000;
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 14px;
