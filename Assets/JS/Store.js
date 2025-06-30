@@ -38,13 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
         handleRemoveProductListeners();
     });
 
-    if (window.innerWidth <= 1024) {
-        const toggleCartBtn = document.getElementById("toggleCartBtn");
-        toggleCartBtn.style.animation = "none";
-        toggleCartBtn.style.transition = "none";
-        toggleCartBtn.style.opacity = "1";
-    }
-
     const products = document.getElementById('products');
     const originalParent = toggleCartBtn.parentElement;
     const originalNextSibling = toggleCartBtn.nextSibling;
