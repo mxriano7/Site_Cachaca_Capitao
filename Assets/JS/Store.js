@@ -4,19 +4,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Defina aqui o produto padrão.
     updateProduct('Carvalho', '670ml', '80.00',
-        'Capitão Carvalho - 670ml:<br>Delicie-se com a Cachaça Capitão Carvalho, uma destilada de sofisticação inigualável. Com seu aroma profundo e suave toque de carvalho, ela proporciona uma experiência única e refinada para seus apreciadores.<br>Teor alcoólico: 42%',
+        '<strong>Capitão Carvalho - 670ml:</strong><br>Delicie-se com a Cachaça Capitão Carvalho, uma destilada de sofisticação inigualável. Com seu aroma profundo e suave toque de carvalho, ela proporciona uma experiência única e refinada para seus apreciadores.<br /><strong>Ingredientes:</strong><br /> Mosto Fermentado do Caldo de Cana de Açúcar, Não Contém Glúten.<br /><strong>Teor alcoólico:</strong> 42%',
         1, '../Assets/Img/Img.Store/Produtos/Carvalho670ml(1)-PNG.png');
     updateProduct('Amburana', '670ml', '60.00',
-        'Capitão Amburana - 670ml:<br>Experimente a Cachaça Capitão Amburana, onde a suavidade da cachaça se funde com os aromas marcantes da madeira de amburana. É a escolha ideal para quem busca sabores autênticos e uma bebida de qualidade superior.<br>Teor alcoólico: 42%',
+        '<strong>Capitão Amburana - 670ml:</strong><br>Experimente a Cachaça Capitão Amburana, onde a suavidade da cachaça se funde com os aromas marcantes da madeira de amburana. É a escolha ideal para quem busca sabores autênticos e uma bebida de qualidade superior.<br /><strong>Ingredientes:</strong><br /> Mosto Fermentado do Caldo de Cana de Açúcar, Não Contém Glúten.<br /><strong>Teor alcoólico:</strong> 42%',
         2, '../Assets/Img/Img.Store/Produtos/Amburana670ml(1)-PNG.png');
     updateProduct('Prata', '670ml', '60.00',
-        'Capitão Prata - 670ml:<br>Uma cachaça leve e cristalina, que reflete a pureza da tradição brasileira. Esta cachaça é a escolha perfeita para quem aprecia a delicadeza e a autenticidade de uma bebida tradicional. Ideal para momentos de celebração.<br>Teor alcoólico: 42%',
+        '<strong>Capitão Prata - 670ml:</strong><br>Uma cachaça leve e cristalina, que reflete a pureza da tradição brasileira. Esta cachaça é a escolha perfeita para quem aprecia a delicadeza e a autenticidade de uma bebida tradicional. Ideal para momentos de celebração.<br /><strong>Ingredientes:</strong><br /> Mosto Fermentado do Caldo de Cana de Açúcar, Não Contém Glúten.<br /><strong>Teor alcoólico:</strong> 42%',
         3, '../Assets/Img/Img.Store/Produtos/Prata670ml(1)-PNG.png');
     updateProduct('Jequitibá', '275ml', '25.00',
-        'Capitão Jequitibá - 275ml:<br>A Cachaça Capitão Jequitibá é uma escolha distinta, envelhecida em tonéis de jequitibá para conferir notas únicas e uma suavidade excepcional. Perfeita para os conhecedores que buscam um toque de autenticidade e refinamento.<br>Teor alcoólico: 42%',
+        '<strong>Capitão Jequitibá - 275ml:</strong><br>A Cachaça Capitão Jequitibá é uma escolha distinta, envelhecida em tonéis de jequitibá para conferir notas únicas e uma suavidade excepcional. Perfeita para os conhecedores que buscam um toque de autenticidade e refinamento.<br /><strong>Ingredientes:</strong><br /> Mosto Fermentado do Caldo de Cana de Açúcar, Não Contém Glúten.<br /><strong>Teor alcoólico:</strong> 42%',
         4, '../Assets/Img/Img.Store/Produtos/Jequitiba275ml(1)-PNG.png');
     updateProduct('Kit Presente', '275ml', '75.00',
-        'Kit Presente - 275ml:<br>Experimente o Kit Presente, contendo três garrafas de 275ml com uma seleção diversificada das melhores cachaças. Ideal para presentear e compartilhar momentos especiais com amigos e familiares que apreciam uma boa bebida.<br>Teor alcoólico: 42%',
+        '<strong>Kit Presente - 275ml:</strong><br>Experimente o Kit Presente, contendo três garrafas de 275ml com uma seleção diversificada das melhores cachaças. Ideal para presentear e compartilhar momentos especiais com amigos e familiares que apreciam uma boa bebida.<br /><strong>Ingredientes:</strong><br /> Mosto Fermentado do Caldo de Cana de Açúcar, Não Contém Glúten.<br /><strong>Teor alcoólico:</strong> 42%',
         5, '../Assets/Img/Img.Store/Produtos/Kit250ml(1)-PNG.png');
 
     // Eventos da barra de navegação.
@@ -38,6 +38,28 @@ document.addEventListener('DOMContentLoaded', function () {
         handleRemoveProductListeners();
     });
 
+    function updateCartButton(isCartVisible) {
+        const isMobile = window.innerWidth <= 1024;
+
+        if (isMobile) {
+            toggleCartBtn.innerHTML = '<i class="fas fa-shopping-cart"></i>';
+        } else {
+            toggleCartBtn.textContent = isCartVisible ? 'Fechar Carrinho' : 'Abrir Carrinho';
+        }
+    }
+
+    function refreshCartButton() {
+        const isCartVisible = cartSection.classList.contains('show');
+        updateCartButton(isCartVisible);
+    }
+
+    refreshCartButton();
+
+    window.addEventListener('resize', refreshCartButton);
+
+    document.addEventListener('DOMContentLoaded', () => {
+    });
+
     function handleCartForLargerScreens() {
         const isCartVisible = cartSection.classList.contains('show');
 
@@ -49,22 +71,19 @@ document.addEventListener('DOMContentLoaded', function () {
             cartSection.classList.add('show');
         }
 
-        toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+        updateCartButton(!isCartVisible);
     }
 
     function handleCartForSmallerScreens() {
         const isCartVisible = cartSection.classList.contains('show');
 
         if (isCartVisible) {
-            cartSection.classList.remove('show');
-            cartSection.classList.remove('slideInCart');
+            cartSection.classList.remove('show', 'slideInCart');
             cartSection.classList.add('slideOutCart');
 
             setTimeout(() => {
                 cartSection.style.display = 'none';
             }, 300);
-
-            toggleCartBtn.textContent = 'Abrir Carrinho';
         } else {
             cartSection.classList.remove('slideOutCart');
             cartSection.classList.add('slideInCart');
@@ -73,9 +92,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 cartSection.style.display = 'block';
                 cartSection.classList.add('show');
             }, 0);
-
-            toggleCartBtn.textContent = 'Fechar Carrinho';
         }
+
+        updateCartButton(!isCartVisible);
     }
 
     toggleCartBtn.addEventListener("click", function () {
@@ -555,9 +574,14 @@ function updateTotal() {
 function openCartInForm() {
     const cartSection = document.querySelector('.cart-section');
     const isCartVisible = cartSection.classList.contains('show');
+
     cartSection.classList.toggle('show');
     cartSection.style.display = isCartVisible ? 'none' : 'block';
-    toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+
+    const isMobile = window.innerWidth <= 1024;
+    if (isMobile) {
+        updateCartButton(!isCartVisible);
+    }
 }
 
 // Abre o formulário para envio do pedido.
@@ -572,15 +596,22 @@ function openOrderForm() {
     const productsSection = document.getElementById('products');
     const footerSection = document.querySelector('footer');
 
+    const isMobile = window.innerWidth <= 1024;
+
     if (cartItems.length > 0) {
         cartSection.classList.toggle('show');
         cartSection.style.display = isCartVisible ? 'none' : 'block';
-        toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+
+        if (!isMobile) {
+            toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+        }
+
         orderSection.style.display = 'block';
         orderFormContainer.style.display = 'block';
         pageSection.style.display = 'none';
         productsSection.style.display = 'none';
         footerSection.style.display = 'none';
+
         window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         alert('Eita... Não há nenhum produto em seu carrinho vamos mudar isso!');
@@ -589,26 +620,35 @@ function openOrderForm() {
         cartSection.style.display = 'none';
         cartSection.classList.remove('show');
         cartSection.style.display = isCartVisible ? 'none' : 'block';
-        toggleCartBtn.textContent = isCartVisible ? 'Abrir Carrinho' : 'Fechar Carrinho';
+
+        if (!isMobile) {
+            toggleCartBtn.textContent = 'Abrir Carrinho';
+        }
+
         pageSection.style.display = '';
         productsSection.style.display = '';
         footerSection.style.display = '';
     }
 }
 
-// Fecha o formulário do pedido.
 function closeOrderForm() {
     const orderSection = document.querySelector('.order-section');
-    const toggleCartBtn = document.getElementById("toggleCartBtn");
     const cartSection = document.querySelector('.cart-section');
+    const toggleCartBtn = document.getElementById("toggleCartBtn");
     const pageSection = document.getElementById('page');
     const productsSection = document.getElementById('products');
     const footerSection = document.querySelector('footer');
 
+    const isMobile = window.innerWidth <= 1024;
+
     orderSection.style.display = 'none';
     cartSection.classList.remove('show');
     cartSection.style.display = 'none';
-    toggleCartBtn.textContent = 'Abrir Carrinho';
+
+    if (!isMobile) {
+        toggleCartBtn.textContent = 'Abrir Carrinho';
+    }
+
     pageSection.style.display = '';
     productsSection.style.display = '';
     footerSection.style.display = '';

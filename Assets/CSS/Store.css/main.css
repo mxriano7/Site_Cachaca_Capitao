@@ -192,6 +192,20 @@ body {
         padding: 6px 14px;
         font-size: 1rem;
         margin: 1em auto;
-        animation-delay: 2.5s;
+        position: fixed;
+        bottom: 1em;
+        right: 1em;
+        z-index: 3000;
+        animation: fadeIn 1.5s ease-out forwards;
+        background-color: #140f07;
+        color: snow;
+        border: 2px solid snow;
+    }
+
+    #toggleCartBtn:hover {
+        background-color: snow;
+        border-radius: 20px;
+        border: 2px solid #140f07;
+        color: #140f07;
     }
 }

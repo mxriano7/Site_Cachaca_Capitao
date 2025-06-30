@@ -16,7 +16,7 @@
     padding: 1.5rem;
     position: fixed;
     top: 2vh;
-    z-index: 2000;
+    z-index: 3000;
 }
 
 .cart-section .cart .total {
@@ -115,7 +115,7 @@
 }
 
 #confirmButton {
-    background-color:brown;
+    background-color: brown;
     color: snow;
     border-radius: 8px;
     border: 2px solid #140f07;
