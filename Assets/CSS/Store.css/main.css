@@ -207,4 +207,8 @@ body {
         border: 2px solid #140f07;
         color: #140f07;
     }
+
+    #toggleCartBtn:active {
+        transform: none;
+    }
 }

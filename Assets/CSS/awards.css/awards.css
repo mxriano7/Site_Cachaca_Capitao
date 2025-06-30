@@ -2,6 +2,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -42,7 +43,7 @@
 .product-awards h2 {
     margin-top: 0;
     font-size: 1.5em;
-    color:  #140f07;
+    color: #140f07;
 }
 
 .product-image {
@@ -101,5 +102,15 @@
 
     .product-awards li {
         font-size: 1rem;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 250px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        object-fit: fill;
+        animation: fadeIn 2s ease-out forwards;
+        opacity: 0;
     }
 }
