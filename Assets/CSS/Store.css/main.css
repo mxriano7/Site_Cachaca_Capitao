@@ -195,7 +195,7 @@ body {
         position: fixed;
         bottom: 1em;
         right: 1em;
-        z-index: 1500;
+        z-index: 3000;
         background-color: #140f07;
         color: snow;
         border: 2px solid snow;
